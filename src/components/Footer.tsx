@@ -32,7 +32,7 @@ const groups = [
 export default function Footer() {
   return (
     <footer className="border-t border-slate-100 bg-white">
-      <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 py-14">
+      <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16 py-14">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">

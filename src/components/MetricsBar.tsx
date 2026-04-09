@@ -37,7 +37,7 @@ export default function MetricsBar() {
 
   return (
     <section ref={ref} className="py-16 bg-gradient-to-r from-brand via-[#5B4FDB] to-brand-dark">
-      <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
+      <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
