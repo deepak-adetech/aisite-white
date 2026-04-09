@@ -31,12 +31,12 @@ function CountUp({
 
 /* ── Lens focus with blur ── */
 const focusItems = [
-  "Data Entry",
-  "Report Generation",
   "Invoice Processing",
-  "Lead Routing",
   "Email Triage",
+  "Data Entry",
+  "Lead Routing",
   "PPT Decks",
+  "Report Generation",
   "Compliance Checks",
 ];
 
