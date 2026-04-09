@@ -4,27 +4,28 @@ const groups = [
   {
     title: "Solutions",
     links: [
-      { label: "AI Agents", href: "#services" },
-      { label: "Workflow Automation", href: "#services" },
-      { label: "Document Intelligence", href: "#services" },
-      { label: "System Integration", href: "#services" },
-      { label: "AI Chatbots", href: "#services" },
-      { label: "Strategy & Audit", href: "#services" },
+      { label: "AI Agents", href: "/services#ai-agents" },
+      { label: "Workflow Automation", href: "/services#workflow-automation" },
+      { label: "Document Intelligence", href: "/services#document-intelligence" },
+      { label: "System Integration", href: "/services#system-integration" },
+      { label: "AI Chatbots", href: "/services#ai-chatbots" },
+      { label: "Strategy & Audit", href: "/services#ai-strategy" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "Results", href: "#case-studies" },
-      { label: "Pricing", href: "#pricing" },
-      { label: "FAQ", href: "#faq" },
+      { label: "About", href: "/about" },
+      { label: "Case Studies", href: "/case-studies" },
+      { label: "Pricing", href: "/#pricing" },
+      { label: "FAQ", href: "/#faq" },
     ],
   },
   {
     title: "Contact",
     links: [
       { label: "hello@autoworkflows.ai", href: "mailto:hello@autoworkflows.ai" },
-      { label: "Book a call", href: "#cta" },
+      { label: "Get in touch", href: "/contact" },
     ],
   },
 ];

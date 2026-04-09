@@ -6,10 +6,10 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import Logo from "./Logo";
 
 const links = [
-  { label: "Solutions", href: "#services" },
-  { label: "Results", href: "#case-studies" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Services", href: "/services" },
+  { label: "Case Studies", href: "/case-studies" },
+  { label: "About", href: "/about" },
+  { label: "Pricing", href: "/#pricing" },
 ];
 
 export default function Navbar() {
@@ -45,7 +45,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#cta"
+              href="/contact"
               className="group inline-flex items-center gap-1.5 rounded-lg bg-slate-900 px-4.5 py-2.5 text-[13px] font-semibold text-white hover:bg-slate-800 transition-colors"
             >
               Get started free
@@ -84,7 +84,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#cta"
+                href="/contact"
                 onClick={() => setMobileOpen(false)}
                 className="block w-full text-center rounded-lg bg-slate-900 px-5 py-3 mt-3 text-[14px] font-semibold text-white"
               >
