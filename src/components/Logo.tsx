@@ -14,7 +14,7 @@ export default function Logo({ className = "" }: { className?: string }) {
         <path d="M12 15 L9 18.5" stroke="white" strokeWidth="1.3" strokeLinecap="round" opacity="0.6" />
         <path d="M18 15 L21 18.5" stroke="white" strokeWidth="1.3" strokeLinecap="round" opacity="0.6" />
       </svg>
-      <span className="text-[18px] font-semibold tracking-[-0.03em] relative">
+      <span className="text-[25px] font-semibold tracking-[-0.03em] relative">
         <span className="text-[#1d1d1f]">AutoWorkflows</span>
         <span className="relative inline-block">
           <span className="text-gradient bg-gradient-to-r from-[#0071e3] to-[#2997ff] bg-[length:200%_100%] animate-shimmer">.AI</span>
