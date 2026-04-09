@@ -2,57 +2,58 @@
 
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "motion/react";
-import { ChevronDown } from "lucide-react";
+import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
-    q: "Is the first workflow really free?",
-    a: "Yes, completely free. We automate one full workflow for you — deployed to production — at zero cost. No credit card, no contracts. We do this because we're confident you'll want to keep going once you see the results.",
+    q: "Is the first workflow actually free?",
+    a: "Yes. We build one complete automation — deployed to production, fully functional — at zero cost. No credit card, no contract, no follow-up sales calls unless you want them. We do this because once you see an AI agent saving your team 20 hours a week, the conversation about what's next happens naturally.",
   },
   {
-    q: "How long does a typical project take?",
-    a: "Most automations are live within 2 weeks. Complex multi-system integrations may take 4-6 weeks. We work in fast sprints with weekly demos so you see progress from day one.",
+    q: "How fast can you deliver?",
+    a: "Most automations go live within two weeks. Complex multi-system integrations might take four to six weeks. We work in fast sprints with weekly demos, so you're never wondering what's happening behind the scenes.",
   },
   {
-    q: "What tools and platforms do you work with?",
-    a: "We're tool-agnostic. We work with 50+ platforms including OpenAI, Zapier, Make, Slack, HubSpot, Salesforce, custom APIs, and more. We pick the best stack for your specific needs.",
+    q: "What tools and AI models do you use?",
+    a: "Whatever solves your problem best. We work with GPT-4o, Claude, Gemini, open-source models, and 50+ integration platforms. We're not locked into any vendor — we evaluate your specific needs and pick the optimal stack.",
   },
   {
-    q: "What types of AI do you use?",
-    a: "We use a mix of large language models (GPT-4, Claude, etc.), computer vision, NLP, and traditional ML — whatever solves your problem best. We're not tied to any single AI provider.",
+    q: "Do we actually own the code?",
+    a: "100%. Every agent, workflow, integration, and line of documentation is yours. We'll hand over the full repo, architecture docs, and deployment config. You can take it in-house, hire another team to maintain it, or keep working with us. No hostage situations.",
   },
   {
-    q: "Do we own the code and workflows you build?",
-    a: "100%. Everything we build is yours — code, agents, workflows, documentation. No vendor lock-in. You can take it in-house whenever you want.",
+    q: "What if AI isn't right for our problem?",
+    a: "We'll tell you. During the initial strategy call, we assess honestly. If your problem is better solved with a simple Zapier flow, a hire, or a process change, we'll say so. Building something that doesn't deliver results hurts us more than it hurts you.",
   },
   {
-    q: "What kind of support do you offer after launch?",
-    a: "Every project includes 90 days of post-launch support. For ongoing needs, our Managed AI plan covers monitoring, optimization, and continuous improvements.",
+    q: "What kind of support do you offer post-launch?",
+    a: "Every project includes 90 days of support — bug fixes, performance tuning, minor adjustments. For ongoing needs, our Managed AI tier covers continuous optimization, monitoring, and monthly improvement sprints.",
   },
   {
-    q: "What if AI isn't the right solution for our problem?",
-    a: "We'll tell you. During our free strategy call, we assess your workflows honestly. If automation isn't the right fit, we'll say so. We'd rather build trust than sell something that won't deliver.",
+    q: "How is this different from hiring an AI consultant?",
+    a: "Consultants give you a PDF. We give you working software. We're engineers who build and deploy production systems, not advisors who tell you what you should do and then leave.",
   },
 ];
 
-function FAQItem({ faq, index }: { faq: (typeof faqs)[0]; index: number }) {
+function FAQItem({ faq }: { faq: (typeof faqs)[0] }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="border-b border-gray-100 last:border-0">
+    <div className="border-b border-slate-100 last:border-0">
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center justify-between w-full py-5 text-left"
+        className="flex items-center justify-between w-full py-5 text-left group"
       >
-        <span className="font-display text-base font-semibold text-gray-900 pr-4">
+        <span className="text-[14px] font-semibold text-slate-900 pr-8 group-hover:text-brand transition-colors">
           {faq.q}
         </span>
-        <ChevronDown
-          size={20}
-          className={`text-gray-400 shrink-0 transition-transform duration-200 ${
-            open ? "rotate-180" : ""
-          }`}
-        />
+        <div className="w-6 h-6 rounded-md bg-slate-100 flex items-center justify-center shrink-0 group-hover:bg-brand-50 transition-colors">
+          {open ? (
+            <Minus size={13} className="text-slate-500 group-hover:text-brand" />
+          ) : (
+            <Plus size={13} className="text-slate-500 group-hover:text-brand" />
+          )}
+        </div>
       </button>
       <AnimatePresence initial={false}>
         {open && (
@@ -63,7 +64,7 @@ function FAQItem({ faq, index }: { faq: (typeof faqs)[0]; index: number }) {
             transition={{ duration: 0.2 }}
             className="overflow-hidden"
           >
-            <p className="pb-5 text-sm text-gray-500 leading-relaxed">
+            <p className="pb-5 text-[13px] text-slate-500 leading-[1.7] max-w-2xl">
               {faq.a}
             </p>
           </motion.div>
@@ -78,30 +79,27 @@ export default function FAQ() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="faq" ref={ref} className="py-20 lg:py-28 bg-gray-50">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <section id="faq" ref={ref} className="py-20 lg:py-28">
+      <div className="mx-auto max-w-3xl px-5 sm:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-14"
+          className="text-center mb-10"
         >
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
-            Frequently asked questions
+          <h2 className="text-[2rem] sm:text-[2.5rem] font-bold leading-[1.12] tracking-[-0.02em] text-slate-900">
+            Common questions
           </h2>
-          <p className="mt-4 text-lg text-gray-500">
-            Everything you need to know before getting started
-          </p>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.15 }}
-          className="rounded-2xl bg-white border border-gray-200 px-6 sm:px-8 shadow-sm"
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="rounded-2xl bg-white border border-slate-200 px-6 sm:px-8"
         >
-          {faqs.map((faq, i) => (
-            <FAQItem key={i} faq={faq} index={i} />
+          {faqs.map((f, i) => (
+            <FAQItem key={i} faq={f} />
           ))}
         </motion.div>
       </div>

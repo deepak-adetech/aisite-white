@@ -2,75 +2,29 @@
 
 export default function Logo({ className = "" }: { className?: string }) {
   return (
-    <a href="#" className={`flex items-center gap-2 ${className}`}>
-      {/* Workflow node icon */}
+    <a href="#" className={`flex items-center gap-2.5 ${className}`}>
       <svg
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
+        width="28"
+        height="28"
+        viewBox="0 0 28 28"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="shrink-0"
       >
-        <rect width="32" height="32" rx="8" fill="#7C3AED" />
-        <circle cx="11" cy="11" r="3" fill="white" />
-        <circle cx="21" cy="11" r="3" fill="white" opacity="0.7" />
-        <circle cx="11" cy="21" r="3" fill="white" opacity="0.7" />
-        <circle cx="21" cy="21" r="3" fill="white" />
-        <line
-          x1="14"
-          y1="11"
-          x2="18"
-          y2="11"
-          stroke="white"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          opacity="0.6"
-        />
-        <line
-          x1="11"
-          y1="14"
-          x2="11"
-          y2="18"
-          stroke="white"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          opacity="0.6"
-        />
-        <line
-          x1="21"
-          y1="14"
-          x2="21"
-          y2="18"
-          stroke="white"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          opacity="0.6"
-        />
-        <line
-          x1="14"
-          y1="21"
-          x2="18"
-          y2="21"
-          stroke="white"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          opacity="0.6"
-        />
-        <line
-          x1="13.5"
-          y1="13.5"
-          x2="18.5"
-          y2="18.5"
-          stroke="white"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          opacity="0.4"
-        />
+        <rect width="28" height="28" rx="7" fill="#4F46E5" />
+        <circle cx="10" cy="10" r="2.5" fill="white" />
+        <circle cx="18" cy="10" r="2.5" fill="white" opacity="0.65" />
+        <circle cx="10" cy="18" r="2.5" fill="white" opacity="0.65" />
+        <circle cx="18" cy="18" r="2.5" fill="white" />
+        <line x1="12.5" y1="10" x2="15.5" y2="10" stroke="white" strokeWidth="1.2" opacity="0.5" />
+        <line x1="10" y1="12.5" x2="10" y2="15.5" stroke="white" strokeWidth="1.2" opacity="0.5" />
+        <line x1="18" y1="12.5" x2="18" y2="15.5" stroke="white" strokeWidth="1.2" opacity="0.5" />
+        <line x1="12.5" y1="18" x2="15.5" y2="18" stroke="white" strokeWidth="1.2" opacity="0.5" />
+        <line x1="12" y1="12" x2="16" y2="16" stroke="white" strokeWidth="1" opacity="0.3" />
       </svg>
-      <span className="font-display text-xl font-bold tracking-tight">
-        <span className="text-gray-900">AutoWorkflows</span>
-        <span className="text-primary">.AI</span>
+      <span className="text-[17px] font-semibold tracking-[-0.02em]">
+        <span className="text-slate-900">AutoWorkflows</span>
+        <span className="text-brand">.AI</span>
       </span>
     </a>
   );

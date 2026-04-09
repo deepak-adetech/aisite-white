@@ -5,46 +5,14 @@ import { motion, useInView } from "motion/react";
 import { Check, X } from "lucide-react";
 
 const rows = [
-  {
-    feature: "First workflow free",
-    us: true,
-    others: false,
-  },
-  {
-    feature: "Custom-built for your stack",
-    us: true,
-    others: false,
-  },
-  {
-    feature: "You own all the code",
-    us: true,
-    others: false,
-  },
-  {
-    feature: "Live in 2 weeks",
-    us: true,
-    others: false,
-  },
-  {
-    feature: "Tool-agnostic approach",
-    us: true,
-    others: false,
-  },
-  {
-    feature: "Dedicated AI engineers",
-    us: true,
-    others: false,
-  },
-  {
-    feature: "Ongoing optimization included",
-    us: true,
-    others: false,
-  },
-  {
-    feature: "No long-term contracts",
-    us: true,
-    others: false,
-  },
+  { feature: "First workflow free — no strings", us: true, others: false },
+  { feature: "Custom-built for your exact stack", us: true, others: false },
+  { feature: "Full code ownership from day one", us: true, others: false },
+  { feature: "Production-ready in 2 weeks", us: true, others: false },
+  { feature: "Tool-agnostic (no vendor lock-in)", us: true, others: false },
+  { feature: "Dedicated AI engineers, not generalists", us: true, others: false },
+  { feature: "Post-launch optimization included", us: true, others: false },
+  { feature: "Month-to-month, cancel anytime", us: true, others: false },
 ];
 
 export default function Comparison() {
@@ -52,63 +20,57 @@ export default function Comparison() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section ref={ref} className="py-20 lg:py-28 bg-gray-50">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <section ref={ref} className="py-20 lg:py-28">
+      <div className="mx-auto max-w-3xl px-5 sm:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-2xl mx-auto mb-14"
+          className="text-center mb-12"
         >
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
-            Not your typical{" "}
-            <span className="text-primary">AI agency</span>
+          <p className="text-[13px] font-semibold text-brand uppercase tracking-wider mb-3">
+            Why us
+          </p>
+          <h2 className="text-[2rem] sm:text-[2.5rem] font-bold leading-[1.12] tracking-[-0.02em] text-slate-900">
+            Not your typical consultancy
           </h2>
-          <p className="mt-4 text-lg text-gray-500">
-            See how we stack up against the rest
+          <p className="mt-4 text-[16px] text-slate-500 max-w-md mx-auto">
+            Most agencies sell hours. We sell outcomes.
           </p>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="rounded-2xl bg-white border border-gray-200 overflow-hidden shadow-sm"
+          className="rounded-2xl bg-white border border-slate-200 overflow-hidden"
         >
-          {/* Header */}
-          <div className="grid grid-cols-3 bg-gray-50 border-b border-gray-200">
-            <div className="p-4 sm:p-5 text-sm font-semibold text-gray-500 uppercase tracking-wider">
-              Feature
+          <div className="grid grid-cols-[1fr_100px_100px] sm:grid-cols-[1fr_120px_120px] border-b border-slate-100 bg-slate-50">
+            <div className="p-4 text-[11px] font-semibold text-slate-400 uppercase tracking-wider" />
+            <div className="p-4 text-center text-[11px] font-bold text-brand uppercase tracking-wider">
+              Us
             </div>
-            <div className="p-4 sm:p-5 text-center">
-              <span className="inline-flex items-center gap-1.5 text-sm font-bold text-primary">
-                AutoWorkflows.AI
-              </span>
-            </div>
-            <div className="p-4 sm:p-5 text-center text-sm font-semibold text-gray-400">
+            <div className="p-4 text-center text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
               Others
             </div>
           </div>
 
-          {/* Rows */}
-          {rows.map((row, i) => (
+          {rows.map((r, i) => (
             <div
-              key={row.feature}
-              className={`grid grid-cols-3 ${
-                i !== rows.length - 1 ? "border-b border-gray-100" : ""
+              key={r.feature}
+              className={`grid grid-cols-[1fr_100px_100px] sm:grid-cols-[1fr_120px_120px] ${
+                i !== rows.length - 1 ? "border-b border-slate-50" : ""
               }`}
             >
-              <div className="p-4 sm:p-5 text-sm font-medium text-gray-700">
-                {row.feature}
-              </div>
-              <div className="p-4 sm:p-5 flex justify-center">
-                <div className="w-7 h-7 rounded-full bg-green-50 flex items-center justify-center">
-                  <Check size={16} className="text-green-600" />
+              <div className="p-4 text-[13px] font-medium text-slate-600">{r.feature}</div>
+              <div className="p-4 flex justify-center">
+                <div className="w-6 h-6 rounded-full bg-emerald/10 flex items-center justify-center">
+                  <Check size={13} className="text-emerald" strokeWidth={3} />
                 </div>
               </div>
-              <div className="p-4 sm:p-5 flex justify-center">
-                <div className="w-7 h-7 rounded-full bg-red-50 flex items-center justify-center">
-                  <X size={16} className="text-red-400" />
+              <div className="p-4 flex justify-center">
+                <div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center">
+                  <X size={13} className="text-slate-300" strokeWidth={3} />
                 </div>
               </div>
             </div>

@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import Logo from "./Logo";
 
 const links = [
-  { label: "Services", href: "#services" },
-  { label: "Case Studies", href: "#case-studies" },
+  { label: "Solutions", href: "#services" },
+  { label: "Results", href: "#case-studies" },
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
 ];
@@ -17,54 +17,52 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100"
+          ? "bg-white/80 backdrop-blur-xl border-b border-slate-200/60 shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+        <div className="flex h-[60px] items-center justify-between">
           <Logo />
 
-          {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-7">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+                className="text-[13px] font-medium text-slate-500 hover:text-slate-900 transition-colors"
               >
                 {link.label}
               </a>
             ))}
             <a
               href="#cta"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-primary/25 hover:bg-primary-dark transition-colors"
+              className="inline-flex items-center gap-1.5 rounded-lg bg-slate-900 px-4 py-2 text-[13px] font-medium text-white hover:bg-slate-800 transition-colors"
             >
-              Book a Free Call
+              Get started
+              <ArrowRight size={13} />
             </a>
           </div>
 
-          {/* Mobile menu button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-gray-600 hover:text-gray-900"
+            className="md:hidden p-2 -mr-2 text-slate-500 hover:text-slate-900"
             aria-label="Toggle menu"
           >
-            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -72,15 +70,15 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden bg-white border-b border-gray-100 overflow-hidden"
+            className="md:hidden bg-white/95 backdrop-blur-xl border-b border-slate-100 overflow-hidden"
           >
-            <div className="px-4 py-4 space-y-3">
+            <div className="px-5 py-4 space-y-1">
               {links.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block text-base font-medium text-gray-700 hover:text-primary transition-colors py-2"
+                  className="block py-2.5 text-[15px] font-medium text-slate-600 hover:text-slate-900"
                 >
                   {link.label}
                 </a>
@@ -88,9 +86,9 @@ export default function Navbar() {
               <a
                 href="#cta"
                 onClick={() => setMobileOpen(false)}
-                className="block w-full text-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white shadow-md shadow-primary/25 hover:bg-primary-dark transition-colors"
+                className="block w-full text-center rounded-lg bg-slate-900 px-4 py-3 mt-3 text-[14px] font-medium text-white"
               >
-                Book a Free Call
+                Get started free
               </a>
             </div>
           </motion.div>

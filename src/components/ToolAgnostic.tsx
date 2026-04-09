@@ -4,67 +4,15 @@ import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 
 const toolRows = [
-  [
-    "OpenAI",
-    "GPT-4",
-    "Claude",
-    "Gemini",
-    "LLaMA",
-    "Mistral",
-    "Cohere",
-    "Perplexity",
-    "Midjourney",
-    "DALL-E",
-    "Whisper",
-    "ElevenLabs",
-  ],
-  [
-    "Zapier",
-    "Make",
-    "n8n",
-    "Power Automate",
-    "Workato",
-    "Tray.io",
-    "Pipedream",
-    "Activepieces",
-    "Integromat",
-    "IFTTT",
-    "Pabbly",
-    "Automate.io",
-  ],
-  [
-    "Slack",
-    "Teams",
-    "HubSpot",
-    "Salesforce",
-    "Airtable",
-    "Notion",
-    "Monday",
-    "Asana",
-    "Jira",
-    "Zendesk",
-    "Freshdesk",
-    "Intercom",
-  ],
-  [
-    "PostgreSQL",
-    "MongoDB",
-    "Redis",
-    "Pinecone",
-    "Weaviate",
-    "Supabase",
-    "Firebase",
-    "AWS",
-    "GCP",
-    "Azure",
-    "Vercel",
-    "Railway",
-  ],
+  ["GPT-4o", "Claude", "Gemini", "LLaMA", "Mistral", "Cohere", "Whisper", "ElevenLabs", "Midjourney", "DALL-E", "Stable Diffusion", "Perplexity"],
+  ["Zapier", "Make", "n8n", "Power Automate", "Workato", "Tray.io", "Pipedream", "Activepieces", "IFTTT", "Pabbly", "Retool", "Temporal"],
+  ["Slack", "Teams", "HubSpot", "Salesforce", "Airtable", "Notion", "Monday", "Asana", "Jira", "Zendesk", "Freshdesk", "Intercom"],
+  ["PostgreSQL", "MongoDB", "Redis", "Pinecone", "Weaviate", "Supabase", "Firebase", "AWS", "GCP", "Azure", "Vercel", "Railway"],
 ];
 
-function ToolCard({ name }: { name: string }) {
+function ToolChip({ name }: { name: string }) {
   return (
-    <div className="inline-flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 whitespace-nowrap shrink-0">
+    <div className="inline-flex items-center rounded-md border border-slate-200 bg-white px-3 py-1.5 text-[12px] font-medium text-slate-500 whitespace-nowrap shrink-0">
       {name}
     </div>
   );
@@ -75,45 +23,38 @@ export default function ToolAgnostic() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section ref={ref} className="py-20 lg:py-28 bg-gray-50 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section ref={ref} className="py-20 lg:py-28 overflow-hidden">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8 mb-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-2xl mx-auto mb-12"
+          className="max-w-xl"
         >
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
-            We don&apos;t sell tools.{" "}
-            <span className="text-primary">We solve problems.</span>
+          <p className="text-[13px] font-semibold text-brand uppercase tracking-wider mb-3">
+            Tool agnostic
+          </p>
+          <h2 className="text-[2rem] sm:text-[2.5rem] font-bold leading-[1.12] tracking-[-0.02em] text-slate-900">
+            We don&apos;t sell tools. We solve problems.
           </h2>
-          <p className="mt-4 text-lg text-gray-500">
-            Tool-agnostic by design. We pick the best stack for your specific
-            needs — not ours.
+          <p className="mt-4 text-[16px] leading-[1.65] text-slate-500">
+            No vendor lock-in, no pushing our preferred stack. We evaluate your
+            needs and pick the best combination from 50+ platforms and AI models.
           </p>
         </motion.div>
       </div>
 
-      {/* Scrolling tool rows */}
-      <div className="space-y-3 mt-10">
+      <div className="space-y-2.5">
         {toolRows.map((row, i) => (
           <div key={i} className="relative">
-            <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-gray-50 to-transparent z-10" />
-            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-gray-50 to-transparent z-10" />
-            <div
-              className={`flex gap-3 ${
-                i % 2 === 0 ? "animate-scroll-left" : "animate-scroll-right"
-              }`}
-            >
-              <div className="flex gap-3">
-                {row.map((tool) => (
-                  <ToolCard key={tool} name={tool} />
-                ))}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
+            <div className={`flex gap-2.5 ${i % 2 === 0 ? "animate-scroll-left" : "animate-scroll-right"}`}>
+              <div className="flex gap-2.5">
+                {row.map((t) => <ToolChip key={t} name={t} />)}
               </div>
-              <div className="flex gap-3">
-                {row.map((tool) => (
-                  <ToolCard key={`dup-${tool}`} name={tool} />
-                ))}
+              <div className="flex gap-2.5">
+                {row.map((t) => <ToolChip key={`d-${t}`} name={t} />)}
               </div>
             </div>
           </div>

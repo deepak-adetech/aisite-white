@@ -2,20 +2,21 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AutoWorkflows.AI — AI Workflow Automation Agency",
+  title: "AutoWorkflows.AI — We Build AI That Works While You Sleep",
   description:
-    "We build custom AI agents and automations for businesses. First workflow automated free, no obligation. AI is all we do.",
+    "Custom AI agents and workflow automation for businesses that want to scale without scaling headcount. First workflow free.",
   keywords: [
     "AI automation",
     "workflow automation",
     "AI agents",
     "business automation",
     "AI agency",
+    "custom AI",
   ],
   openGraph: {
-    title: "AutoWorkflows.AI — AI Workflow Automation Agency",
+    title: "AutoWorkflows.AI — We Build AI That Works While You Sleep",
     description:
-      "We build custom AI agents and automations for businesses. First workflow automated free.",
+      "Custom AI agents and workflow automation for businesses. First workflow free.",
     type: "website",
   },
 };
@@ -27,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-white text-gray-900 font-sans antialiased">
+      <body className="min-h-screen bg-white text-slate-900 font-sans antialiased">
         {children}
       </body>
     </html>

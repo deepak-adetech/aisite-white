@@ -26,18 +26,15 @@ function CountUp({ end, suffix = "" }: { end: number; suffix?: string }) {
   }, [inView, end]);
 
   return (
-    <span ref={ref}>
-      {count}
-      {suffix}
-    </span>
+    <span ref={ref}>{count}{suffix}</span>
   );
 }
 
 const metrics = [
-  { value: 50, suffix: "+", label: "Companies automated" },
-  { value: 2, suffix: " weeks", label: "Average launch time" },
-  { value: 80, suffix: "%", label: "Cost reduction" },
-  { value: 12, suffix: "x", label: "Average ROI" },
+  { value: 50, suffix: "+", label: "Companies shipped" },
+  { value: 14, suffix: " days", label: "Average time to live" },
+  { value: 80, suffix: "%", label: "Cost reduction (avg)" },
+  { value: 12, suffix: "x", label: "Return on investment" },
 ];
 
 export default function MetricsBar() {
@@ -45,21 +42,21 @@ export default function MetricsBar() {
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section ref={ref} className="py-16 bg-primary">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section ref={ref} className="py-14 border-y border-slate-100 bg-white">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x lg:divide-slate-100"
         >
-          {metrics.map((metric) => (
-            <div key={metric.label} className="text-center">
-              <div className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
-                <CountUp end={metric.value} suffix={metric.suffix} />
+          {metrics.map((m, i) => (
+            <div key={m.label} className="text-center lg:px-6">
+              <div className="text-[2rem] sm:text-[2.4rem] font-bold tracking-tight text-slate-900">
+                <CountUp end={m.value} suffix={m.suffix} />
               </div>
-              <p className="mt-2 text-sm text-purple-200 font-medium">
-                {metric.label}
+              <p className="mt-1 text-[12px] font-medium text-slate-400 uppercase tracking-wider">
+                {m.label}
               </p>
             </div>
           ))}
