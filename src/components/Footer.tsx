@@ -4,28 +4,35 @@ const groups = [
   {
     title: "Solutions",
     links: [
-      { label: "AI Agents", href: "/services#ai-agents" },
-      { label: "Workflow Automation", href: "/services#workflow-automation" },
-      { label: "Document Intelligence", href: "/services#document-intelligence" },
-      { label: "System Integration", href: "/services#system-integration" },
-      { label: "AI Chatbots", href: "/services#ai-chatbots" },
-      { label: "Strategy & Audit", href: "/services#ai-strategy" },
+      { label: "Finance & Accounting", href: "/for/finance-ops" },
+      { label: "Operations", href: "/for/operations" },
+      { label: "Sales & Marketing", href: "/for/sales-marketing" },
+    ],
+  },
+  {
+    title: "Capabilities",
+    links: [
+      { label: "Workflow Automation", href: "/capabilities/workflow-automation" },
+      { label: "AI Agents", href: "/capabilities/ai-agents" },
+      { label: "All Services", href: "/services" },
     ],
   },
   {
     title: "Company",
     links: [
       { label: "About", href: "/about" },
+      { label: "How We Work", href: "/how-we-work" },
       { label: "Case Studies", href: "/case-studies" },
       { label: "Pricing", href: "/#pricing" },
       { label: "FAQ", href: "/#faq" },
     ],
   },
   {
-    title: "Contact",
+    title: "Get Started",
     links: [
+      { label: "Free Assessment", href: "/start" },
+      { label: "Contact Us", href: "/contact" },
       { label: "hello@autoworkflows.ai", href: "mailto:hello@autoworkflows.ai" },
-      { label: "Get in touch", href: "/contact" },
     ],
   },
 ];
@@ -34,7 +41,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-slate-100 bg-white">
       <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16 py-14">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
               <svg width="24" height="24" viewBox="0 0 30 30" fill="none" className="shrink-0">
@@ -45,7 +52,6 @@ export default function Footer() {
                 <circle cx="22.5" cy="21" r="3" fill="white" opacity="0.8" />
                 <path d="M12 15 L9 18.5" stroke="white" strokeWidth="1.3" strokeLinecap="round" opacity="0.6" />
                 <path d="M18 15 L21 18.5" stroke="white" strokeWidth="1.3" strokeLinecap="round" opacity="0.6" />
-                <path d="M10.5 21 L19.5 21" stroke="white" strokeWidth="1" strokeLinecap="round" strokeDasharray="2 2" opacity="0.4" />
               </svg>
               <span className="text-[15px] font-bold tracking-[-0.01em]">
                 <span className="text-slate-900">AutoWorkflows</span>

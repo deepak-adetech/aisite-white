@@ -260,19 +260,12 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            <motion.h1 {...fadeUp(0.1)} className="text-slate-900">
-              <span className="block text-[2.6rem] sm:text-[3.4rem] lg:text-[3.8rem] font-extrabold leading-[1.05] tracking-[-0.035em]">
-                Turn Workflows into Autopilot.
-              </span>
-              <span className="block text-[2.4rem] sm:text-[3.1rem] lg:text-[3.4rem] font-semibold leading-[1.1] tracking-[-0.03em] text-gradient bg-gradient-to-r from-brand via-purple-500 to-brand-light mt-1">
-                Focus on Growth, Not Operations.
-              </span>
+            <motion.h1 {...fadeUp(0.1)} className="text-[2.4rem] sm:text-[3rem] lg:text-[3.5rem] font-extrabold leading-[1.08] tracking-[-0.035em] text-slate-900">
+              Turn Workflows into Autopilot.
             </motion.h1>
 
-            <motion.p {...fadeUp(0.2)} className="mt-6 text-[17px] sm:text-[18px] leading-[1.7] text-slate-600 max-w-[480px]">
-              Custom AI agents that handle your repetitive work — processing documents,
-              responding to leads, updating systems — so your team can focus on
-              what actually grows revenue.
+            <motion.p {...fadeUp(0.18)} className="mt-4 text-[17px] sm:text-[19px] leading-[1.6] text-slate-500 max-w-[500px]">
+              We build custom AI agents and automations so your team can stop drowning in repetitive work and start focusing on what actually grows the business.
             </motion.p>
 
             <motion.div {...fadeUp(0.3)} className="mt-9 flex flex-col sm:flex-row gap-3.5">
