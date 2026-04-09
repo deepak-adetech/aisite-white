@@ -163,10 +163,10 @@ export default function Hero() {
               className="text-slate-900"
             >
               <span className="block text-[2.6rem] sm:text-[3.4rem] lg:text-[3.8rem] font-extrabold leading-[1.05] tracking-[-0.035em]">
-                Ship AI that works.
+                We automate your work.
               </span>
               <span className="block text-[2.4rem] sm:text-[3.1rem] lg:text-[3.4rem] font-semibold leading-[1.1] tracking-[-0.03em] text-gradient bg-gradient-to-r from-brand via-purple-500 to-brand-light mt-1">
-                Not AI that demos.
+                You scale your business.
               </span>
             </motion.h1>
 
