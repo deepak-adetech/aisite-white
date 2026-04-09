@@ -142,8 +142,8 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            <motion.h1 {...fadeUp(0.1)} className="font-display text-[2.5rem] sm:text-[3.2rem] lg:text-[3.5rem] font-semibold leading-[1.07] tracking-[-0.015em] text-[#1d1d1f]">
-              Turn Workflows into <span className="text-gradient bg-gradient-to-r from-[#0071e3] to-[#2997ff]">Autopilot.</span>
+            <motion.h1 {...fadeUp(0.1)} className="font-display text-[2.4rem] sm:text-[3.2rem] lg:text-[3.6rem] font-extrabold leading-[1.08] tracking-[-0.035em] text-[#1d1d1f]">
+              Turn Workflows into <span className="text-gradient bg-gradient-to-r from-[#0071e3] via-[#2997ff] to-[#64D2FF]">Autopilot.</span>
             </motion.h1>
 
             <motion.p {...fadeUp(0.18)} className="mt-4 text-[17px] leading-[1.47] tracking-[-0.022em] text-[#86868b] max-w-[460px]">
