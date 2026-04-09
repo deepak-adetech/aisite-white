@@ -36,12 +36,15 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
-              <svg width="24" height="24" viewBox="0 0 28 28" fill="none" className="shrink-0">
-                <rect width="28" height="28" rx="7" fill="#4F46E5" />
-                <circle cx="10" cy="10" r="2.5" fill="white" />
-                <circle cx="18" cy="10" r="2.5" fill="white" opacity="0.65" />
-                <circle cx="10" cy="18" r="2.5" fill="white" opacity="0.65" />
-                <circle cx="18" cy="18" r="2.5" fill="white" />
+              <svg width="24" height="24" viewBox="0 0 30 30" fill="none" className="shrink-0">
+                <rect width="30" height="30" rx="8" fill="#4F46E5" />
+                <circle cx="15" cy="12" r="4" fill="white" />
+                <circle cx="15" cy="12" r="2" fill="#4F46E5" />
+                <circle cx="7.5" cy="21" r="3" fill="white" opacity="0.8" />
+                <circle cx="22.5" cy="21" r="3" fill="white" opacity="0.8" />
+                <path d="M12 15 L9 18.5" stroke="white" strokeWidth="1.3" strokeLinecap="round" opacity="0.6" />
+                <path d="M18 15 L21 18.5" stroke="white" strokeWidth="1.3" strokeLinecap="round" opacity="0.6" />
+                <path d="M10.5 21 L19.5 21" stroke="white" strokeWidth="1" strokeLinecap="round" strokeDasharray="2 2" opacity="0.4" />
               </svg>
               <span className="text-[15px] font-bold tracking-[-0.01em]">
                 <span className="text-slate-900">AutoWorkflows</span>
