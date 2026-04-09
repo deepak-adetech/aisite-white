@@ -10,7 +10,7 @@ export default function FooterCTA() {
 
   return (
     <section id="cta" ref={ref} className="py-20 lg:py-28">
-      <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
+      <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -22,7 +22,7 @@ export default function FooterCTA() {
 
           {/* Decorative mesh */}
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand/15 rounded-full blur-[100px]" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-coral/10 rounded-full blur-[80px]" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#FF3B30]/10 rounded-full blur-[80px]" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-brand-light/10 rounded-full blur-[60px]" />
 
           {/* Grid overlay */}
@@ -45,7 +45,7 @@ export default function FooterCTA() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-1.5 mb-8"
             >
-              <Sparkles size={13} className="text-amber" />
+              <Sparkles size={13} className="text-[#FF9F0A]" />
               <span className="text-[11px] font-bold text-white/80 uppercase tracking-wider">
                 Free first workflow
               </span>
@@ -78,7 +78,7 @@ export default function FooterCTA() {
             >
               <a
                 href="mailto:hello@autoworkflows.ai"
-                className="group inline-flex items-center gap-2.5 rounded-xl bg-white px-8 py-4 text-[15px] font-bold text-slate-900 shadow-2xl shadow-black/20 hover:bg-slate-50 hover:-translate-y-0.5 transition-all duration-200"
+                className="group inline-flex items-center gap-2.5 rounded-xl bg-white px-8 py-4 text-[15px] font-bold text-[#1d1d1f] shadow-2xl shadow-black/20 hover:bg-[#f5f5f7] hover:-translate-y-0.5 transition-all duration-200"
               >
                 Book a free strategy call
                 <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
@@ -95,7 +95,7 @@ export default function FooterCTA() {
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.7 }}
-              className="mt-6 text-[13px] text-slate-400"
+              className="mt-6 text-[13px] text-[#86868b]"
             >
               No contract. No credit card. No catch.
             </motion.p>

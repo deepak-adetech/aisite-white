@@ -70,7 +70,7 @@ const tools = [
 function BrandChip({ name, color, bg }: { name: string; color: string; bg: string }) {
   return (
     <div
-      className="inline-flex items-center gap-2.5 rounded-xl border border-slate-200/60 px-4 py-2.5 shrink-0 hover:shadow-sm transition-shadow"
+      className="inline-flex items-center gap-2.5 rounded-xl border border-[#d2d2d7]/60 px-4 py-2.5 shrink-0 hover:shadow-sm transition-shadow"
       style={{ background: bg }}
     >
       <div
@@ -79,7 +79,7 @@ function BrandChip({ name, color, bg }: { name: string; color: string; bg: strin
       >
         {name.charAt(0)}
       </div>
-      <span className="text-[13px] font-semibold text-slate-700 whitespace-nowrap">{name}</span>
+      <span className="text-[13px] font-semibold text-[#333336] whitespace-nowrap">{name}</span>
     </div>
   );
 }
@@ -90,23 +90,23 @@ export default function ToolAgnostic() {
 
   return (
     <section ref={ref} className="py-24 lg:py-32 overflow-hidden">
-      <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16 mb-12">
+      <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16 mb-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="max-w-xl"
         >
-          <p className="text-[13px] font-bold text-brand uppercase tracking-wider mb-4">
+          <p className="text-[13px] font-bold text-[#0071e3] uppercase tracking-wider mb-4">
             Tool agnostic
           </p>
-          <h2 className="text-[2.2rem] sm:text-[2.8rem] font-extrabold leading-[1.1] tracking-[-0.03em] text-slate-900">
+          <h2 className="text-[2.2rem] sm:text-[2.8rem] font-extrabold leading-[1.1] tracking-[-0.03em] text-[#1d1d1f]">
             We don&apos;t sell tools.{" "}
             <span className="text-gradient bg-gradient-to-r from-brand to-brand-light">
               We solve problems.
             </span>
           </h2>
-          <p className="mt-4 text-[16px] leading-[1.7] text-slate-600">
+          <p className="mt-4 text-[16px] leading-[1.7] text-[#424245]">
             No vendor lock-in. We evaluate your needs and pick the best combination
             from 50+ platforms, AI models, and infrastructure providers.
           </p>

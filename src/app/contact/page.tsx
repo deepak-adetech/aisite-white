@@ -29,23 +29,23 @@ export default function ContactPage() {
       <main>
         {/* Hero */}
         <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-b from-slate-50 via-white to-white">
-          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
             <div className="grid lg:grid-cols-[1fr_1fr] gap-16 items-start">
               {/* Left — copy */}
               <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }}>
-                <div className="inline-flex items-center gap-2 rounded-full bg-brand-50 border border-brand-100/80 px-3.5 py-1.5 mb-7">
-                  <Sparkles size={12} className="text-brand" />
-                  <span className="text-[11px] font-bold text-brand tracking-wide uppercase">
+                <div className="inline-flex items-center gap-2 rounded-full bg-[#0071e3]/5 border border-brand-100/80 px-3.5 py-1.5 mb-7">
+                  <Sparkles size={12} className="text-[#0071e3]" />
+                  <span className="text-[11px] font-bold text-[#0071e3] tracking-wide uppercase">
                     Free first workflow
                   </span>
                 </div>
-                <h1 className="text-[2.4rem] sm:text-[3rem] font-extrabold leading-[1.08] tracking-[-0.035em] text-slate-900">
+                <h1 className="text-[2.4rem] sm:text-[3rem] font-extrabold leading-[1.08] tracking-[-0.035em] text-[#1d1d1f]">
                   Let&apos;s talk about{" "}
                   <span className="text-gradient bg-gradient-to-r from-brand via-purple-500 to-brand-light">
                     what to automate first
                   </span>
                 </h1>
-                <p className="mt-6 text-[17px] leading-[1.7] text-slate-600 max-w-md">
+                <p className="mt-6 text-[17px] leading-[1.7] text-[#424245] max-w-md">
                   Book a free 30-minute strategy call. We&apos;ll map your workflows,
                   identify the biggest opportunities, and show you exactly how to get started.
                 </p>
@@ -53,23 +53,23 @@ export default function ContactPage() {
                 {/* Contact details */}
                 <div className="mt-10 space-y-4">
                   <div className="flex items-center gap-3.5">
-                    <div className="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center text-brand shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-[#0071e3]/5 flex items-center justify-center text-[#0071e3] shrink-0">
                       <Mail size={18} />
                     </div>
                     <div>
-                      <p className="text-[12px] font-bold text-slate-400 uppercase tracking-wider">Email</p>
-                      <a href="mailto:hello@autoworkflows.ai" className="text-[15px] font-semibold text-slate-900 hover:text-brand transition-colors">
+                      <p className="text-[12px] font-bold text-[#86868b] uppercase tracking-wider">Email</p>
+                      <a href="mailto:hello@autoworkflows.ai" className="text-[15px] font-semibold text-[#1d1d1f] hover:text-[#0071e3] transition-colors">
                         hello@autoworkflows.ai
                       </a>
                     </div>
                   </div>
                   <div className="flex items-center gap-3.5">
-                    <div className="w-10 h-10 rounded-xl bg-emerald/10 flex items-center justify-center text-emerald shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-[#30D158]/10 flex items-center justify-center text-[#30D158] shrink-0">
                       <Clock size={18} />
                     </div>
                     <div>
-                      <p className="text-[12px] font-bold text-slate-400 uppercase tracking-wider">Response time</p>
-                      <p className="text-[15px] font-semibold text-slate-900">Under 4 hours, usually faster</p>
+                      <p className="text-[12px] font-bold text-[#86868b] uppercase tracking-wider">Response time</p>
+                      <p className="text-[15px] font-semibold text-[#1d1d1f]">Under 4 hours, usually faster</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3.5">
@@ -77,8 +77,8 @@ export default function ContactPage() {
                       <MapPin size={18} />
                     </div>
                     <div>
-                      <p className="text-[12px] font-bold text-slate-400 uppercase tracking-wider">Location</p>
-                      <p className="text-[15px] font-semibold text-slate-900">Remote-first, global clients</p>
+                      <p className="text-[12px] font-bold text-[#86868b] uppercase tracking-wider">Location</p>
+                      <p className="text-[15px] font-semibold text-[#1d1d1f]">Remote-first, global clients</p>
                     </div>
                   </div>
                 </div>
@@ -90,30 +90,30 @@ export default function ContactPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
               >
-                <div className="rounded-2xl bg-white border border-slate-200 shadow-sm p-8">
-                  <h2 className="text-[20px] font-bold text-slate-900 mb-6">Get in touch</h2>
+                <div className="rounded-2xl bg-white border border-[#d2d2d7] shadow-sm p-8">
+                  <h2 className="text-[20px] font-bold text-[#1d1d1f] mb-6">Get in touch</h2>
                   <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-[12px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">First name</label>
-                        <input type="text" className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-2.5 text-[14px] text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand/20 focus:border-brand transition" placeholder="Jane" />
+                        <label className="block text-[12px] font-bold text-[#86868b] uppercase tracking-wider mb-1.5">First name</label>
+                        <input type="text" className="w-full rounded-lg border border-[#d2d2d7] bg-[#f5f5f7] px-4 py-2.5 text-[14px] text-[#1d1d1f] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand/20 focus:border-brand transition" placeholder="Jane" />
                       </div>
                       <div>
-                        <label className="block text-[12px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">Last name</label>
-                        <input type="text" className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-2.5 text-[14px] text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand/20 focus:border-brand transition" placeholder="Smith" />
+                        <label className="block text-[12px] font-bold text-[#86868b] uppercase tracking-wider mb-1.5">Last name</label>
+                        <input type="text" className="w-full rounded-lg border border-[#d2d2d7] bg-[#f5f5f7] px-4 py-2.5 text-[14px] text-[#1d1d1f] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand/20 focus:border-brand transition" placeholder="Smith" />
                       </div>
                     </div>
                     <div>
-                      <label className="block text-[12px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">Work email</label>
-                      <input type="email" className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-2.5 text-[14px] text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand/20 focus:border-brand transition" placeholder="jane@company.com" />
+                      <label className="block text-[12px] font-bold text-[#86868b] uppercase tracking-wider mb-1.5">Work email</label>
+                      <input type="email" className="w-full rounded-lg border border-[#d2d2d7] bg-[#f5f5f7] px-4 py-2.5 text-[14px] text-[#1d1d1f] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand/20 focus:border-brand transition" placeholder="jane@company.com" />
                     </div>
                     <div>
-                      <label className="block text-[12px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">Company</label>
-                      <input type="text" className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-2.5 text-[14px] text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand/20 focus:border-brand transition" placeholder="Acme Corp" />
+                      <label className="block text-[12px] font-bold text-[#86868b] uppercase tracking-wider mb-1.5">Company</label>
+                      <input type="text" className="w-full rounded-lg border border-[#d2d2d7] bg-[#f5f5f7] px-4 py-2.5 text-[14px] text-[#1d1d1f] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand/20 focus:border-brand transition" placeholder="Acme Corp" />
                     </div>
                     <div>
-                      <label className="block text-[12px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">What do you want to automate?</label>
-                      <textarea rows={4} className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-2.5 text-[14px] text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand/20 focus:border-brand transition resize-none" placeholder="Tell us about the workflows or tasks you'd like to automate..." />
+                      <label className="block text-[12px] font-bold text-[#86868b] uppercase tracking-wider mb-1.5">What do you want to automate?</label>
+                      <textarea rows={4} className="w-full rounded-lg border border-[#d2d2d7] bg-[#f5f5f7] px-4 py-2.5 text-[14px] text-[#1d1d1f] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand/20 focus:border-brand transition resize-none" placeholder="Tell us about the workflows or tasks you'd like to automate..." />
                     </div>
                     <button
                       type="submit"
@@ -122,7 +122,7 @@ export default function ContactPage() {
                       Send message
                       <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
                     </button>
-                    <p className="text-[12px] text-slate-400 text-center">
+                    <p className="text-[12px] text-[#86868b] text-center">
                       We&apos;ll respond within 4 hours. No spam, ever.
                     </p>
                   </form>
@@ -136,15 +136,15 @@ export default function ContactPage() {
         <section className="py-20 lg:py-28">
           <div className="mx-auto max-w-[1100px] px-6 sm:px-10 lg:px-16">
             <Section className="text-center mb-12">
-              <h2 className="text-[2rem] sm:text-[2.4rem] font-extrabold leading-[1.12] tracking-[-0.03em] text-slate-900">
+              <h2 className="text-[2rem] sm:text-[2.4rem] font-extrabold leading-[1.12] tracking-[-0.03em] text-[#1d1d1f]">
                 Before you reach out
               </h2>
             </Section>
             <div className="space-y-4">
               {faqs.map((f) => (
-                <Section key={f.q} className="rounded-2xl bg-white border border-slate-200 p-6 sm:p-8">
-                  <h3 className="text-[16px] font-bold text-slate-900">{f.q}</h3>
-                  <p className="mt-2 text-[14px] text-slate-600 leading-[1.7]">{f.a}</p>
+                <Section key={f.q} className="rounded-2xl bg-white border border-[#d2d2d7] p-6 sm:p-8">
+                  <h3 className="text-[16px] font-bold text-[#1d1d1f]">{f.q}</h3>
+                  <p className="mt-2 text-[14px] text-[#424245] leading-[1.7]">{f.a}</p>
                 </Section>
               ))}
             </div>

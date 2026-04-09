@@ -70,14 +70,14 @@ export default function HowWeWorkPage() {
       <Navbar />
       <main>
         <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-b from-slate-50 via-white to-white">
-          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-3xl mx-auto text-center">
-              <p className="text-[13px] font-bold text-brand uppercase tracking-wider mb-4">How we work</p>
-              <h1 className="text-[2.4rem] sm:text-[3rem] lg:text-[3.4rem] font-extrabold leading-[1.08] tracking-[-0.035em] text-slate-900">
+              <p className="text-[13px] font-bold text-[#0071e3] uppercase tracking-wider mb-4">How we work</p>
+              <h1 className="text-[2.4rem] sm:text-[3rem] lg:text-[3.4rem] font-extrabold leading-[1.08] tracking-[-0.035em] text-[#1d1d1f]">
                 From first call to{" "}
                 <span className="text-gradient bg-gradient-to-r from-brand via-purple-500 to-brand-light">production in weeks</span>
               </h1>
-              <p className="mt-5 text-[17px] leading-[1.7] text-slate-600 max-w-2xl mx-auto">
+              <p className="mt-5 text-[17px] leading-[1.7] text-[#424245] max-w-2xl mx-auto">
                 No six-month timelines. No endless discovery phases. We move fast, show
                 you working software every week, and get to measurable results before the
                 first invoice.
@@ -87,7 +87,7 @@ export default function HowWeWorkPage() {
         </section>
 
         <section className="py-20 lg:py-28">
-          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
             <div className="space-y-8">
               {steps.map((s, i) => {
                 const Icon = s.icon;
@@ -101,23 +101,23 @@ export default function HowWeWorkPage() {
                         </div>
                         <div>
                           <span className="text-[32px] font-extrabold text-slate-100 block leading-none">{s.number}</span>
-                          <span className="text-[12px] font-bold text-brand uppercase tracking-wider">{s.duration}</span>
+                          <span className="text-[12px] font-bold text-[#0071e3] uppercase tracking-wider">{s.duration}</span>
                         </div>
                       </div>
 
                       {/* Right — content */}
-                      <div className="rounded-2xl bg-white border border-slate-200/80 p-7 sm:p-8">
-                        <h3 className="text-[1.4rem] sm:text-[1.6rem] font-extrabold text-slate-900 tracking-[-0.02em]">{s.title}</h3>
-                        <p className="mt-3 text-[15px] leading-[1.7] text-slate-600">{s.description}</p>
+                      <div className="rounded-2xl bg-white border border-[#d2d2d7]/80 p-7 sm:p-8">
+                        <h3 className="text-[1.4rem] sm:text-[1.6rem] font-extrabold text-[#1d1d1f] tracking-[-0.02em]">{s.title}</h3>
+                        <p className="mt-3 text-[15px] leading-[1.7] text-[#424245]">{s.description}</p>
                         <div className="mt-6">
-                          <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-3">Deliverables</p>
+                          <p className="text-[11px] font-bold text-[#86868b] uppercase tracking-wider mb-3">Deliverables</p>
                           <div className="grid sm:grid-cols-2 gap-2">
                             {s.deliverables.map((d) => (
                               <div key={d} className="flex items-center gap-2.5">
-                                <div className="w-4 h-4 rounded-full bg-emerald/10 flex items-center justify-center shrink-0">
-                                  <Check size={9} className="text-emerald" strokeWidth={3} />
+                                <div className="w-4 h-4 rounded-full bg-[#30D158]/10 flex items-center justify-center shrink-0">
+                                  <Check size={9} className="text-[#30D158]" strokeWidth={3} />
                                 </div>
-                                <span className="text-[13px] text-slate-600">{d}</span>
+                                <span className="text-[13px] text-[#424245]">{d}</span>
                               </div>
                             ))}
                           </div>
@@ -132,12 +132,12 @@ export default function HowWeWorkPage() {
         </section>
 
         <section className="py-20 lg:py-28 bg-gradient-to-b from-[#F5F3FF]/40 to-white">
-          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
             <Section className="text-center max-w-2xl mx-auto">
-              <h2 className="text-[2rem] sm:text-[2.4rem] font-extrabold leading-[1.12] tracking-[-0.03em] text-slate-900">
+              <h2 className="text-[2rem] sm:text-[2.4rem] font-extrabold leading-[1.12] tracking-[-0.03em] text-[#1d1d1f]">
                 Ready to get started?
               </h2>
-              <p className="mt-4 text-[16px] text-slate-600">Answer a few quick questions and we&apos;ll put together a custom plan for your team.</p>
+              <p className="mt-4 text-[16px] text-[#424245]">Answer a few quick questions and we&apos;ll put together a custom plan for your team.</p>
               <a href="/start" className="group inline-flex items-center gap-2 mt-8 rounded-xl bg-gradient-to-r from-brand to-brand-dark px-7 py-3.5 text-[15px] font-bold text-white shadow-lg shadow-brand/25 hover:-translate-y-0.5 transition-all duration-200">
                 Start your free assessment
                 <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />

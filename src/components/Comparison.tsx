@@ -21,20 +21,20 @@ export default function Comparison() {
 
   return (
     <section ref={ref} className="py-24 lg:py-32">
-      <div className="mx-auto max-w-[1100px] px-6 sm:px-10 lg:px-16">
+      <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-14"
         >
-          <p className="text-[13px] font-bold text-brand uppercase tracking-wider mb-4">
+          <p className="text-[13px] font-bold text-[#0071e3] uppercase tracking-wider mb-4">
             Why us
           </p>
-          <h2 className="text-[2.2rem] sm:text-[2.8rem] font-extrabold leading-[1.1] tracking-[-0.03em] text-slate-900">
+          <h2 className="text-[2.2rem] sm:text-[2.8rem] font-extrabold leading-[1.1] tracking-[-0.03em] text-[#1d1d1f]">
             Not your typical consultancy
           </h2>
-          <p className="mt-4 text-[16px] text-slate-600 max-w-md mx-auto">
+          <p className="mt-4 text-[16px] text-[#424245] max-w-md mx-auto">
             Most agencies sell hours. We sell outcomes.
           </p>
         </motion.div>
@@ -43,24 +43,24 @@ export default function Comparison() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
-          className="rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm"
+          className="rounded-2xl bg-white border border-[#d2d2d7] overflow-hidden shadow-sm"
         >
-          <div className="grid grid-cols-[1fr_100px_100px] sm:grid-cols-[1fr_140px_140px] border-b border-slate-100 bg-slate-50/80">
+          <div className="grid grid-cols-[1fr_100px_100px] sm:grid-cols-[1fr_140px_140px] border-b border-[#e8e8ed] bg-[#f5f5f7]/80">
             <div className="p-5" />
-            <div className="p-5 text-center text-[11px] font-bold text-brand uppercase tracking-wider">Us</div>
-            <div className="p-5 text-center text-[11px] font-bold text-slate-400 uppercase tracking-wider">Others</div>
+            <div className="p-5 text-center text-[11px] font-bold text-[#0071e3] uppercase tracking-wider">Us</div>
+            <div className="p-5 text-center text-[11px] font-bold text-[#86868b] uppercase tracking-wider">Others</div>
           </div>
           {rows.map((r, i) => (
             <div
               key={r.feature}
               className={`grid grid-cols-[1fr_100px_100px] sm:grid-cols-[1fr_140px_140px] ${
                 i < rows.length - 1 ? "border-b border-slate-50" : ""
-              } hover:bg-slate-50/50 transition-colors`}
+              } hover:bg-[#f5f5f7] transition-colors`}
             >
-              <div className="p-5 text-[14px] font-medium text-slate-700">{r.feature}</div>
+              <div className="p-5 text-[14px] font-medium text-[#333336]">{r.feature}</div>
               <div className="p-5 flex justify-center">
-                <div className="w-7 h-7 rounded-full bg-emerald/10 flex items-center justify-center">
-                  <Check size={14} className="text-emerald" strokeWidth={3} />
+                <div className="w-7 h-7 rounded-full bg-[#30D158]/10 flex items-center justify-center">
+                  <Check size={14} className="text-[#30D158]" strokeWidth={3} />
                 </div>
               </div>
               <div className="p-5 flex justify-center">

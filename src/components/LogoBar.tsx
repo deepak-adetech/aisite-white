@@ -26,14 +26,14 @@ const tools = [
 
 function ToolChip({ name, color }: { name: string; color: string }) {
   return (
-    <div className="flex items-center gap-2.5 rounded-xl bg-white border border-slate-100 px-4 py-2.5 shadow-[0_1px_3px_rgba(0,0,0,0.03)] shrink-0">
+    <div className="flex items-center gap-2.5 rounded-xl bg-white border border-[#e8e8ed] px-4 py-2.5 shadow-[0_1px_3px_rgba(0,0,0,0.03)] shrink-0">
       <div
         className="w-5 h-5 rounded flex items-center justify-center text-[9px] font-extrabold text-white shrink-0"
         style={{ background: color }}
       >
         {name.charAt(0)}
       </div>
-      <span className="text-[13px] font-semibold text-slate-700 whitespace-nowrap">{name}</span>
+      <span className="text-[13px] font-semibold text-[#333336] whitespace-nowrap">{name}</span>
     </div>
   );
 }
@@ -43,12 +43,12 @@ export default function LogoBar() {
   const inView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section ref={ref} className="py-10 bg-slate-50/60 border-y border-slate-100/80 overflow-hidden">
+    <section ref={ref} className="py-10 bg-[#f5f5f7] border-y border-[#e8e8ed]/80 overflow-hidden">
       <motion.p
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : {}}
         transition={{ duration: 0.5 }}
-        className="text-center text-[12px] font-bold text-slate-400 uppercase tracking-wider mb-5 px-6"
+        className="text-center text-[12px] font-bold text-[#86868b] uppercase tracking-wider mb-5 px-6"
       >
         Connects with your existing tools
       </motion.p>

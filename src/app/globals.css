@@ -1,56 +1,73 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #FAFAF8;
-  --color-foreground: #0F172A;
+  /* Apple Design System Colors */
+  --color-background: #ffffff;
+  --color-foreground: #1d1d1f;
 
-  --color-brand: #4F46E5;
-  --color-brand-light: #818CF8;
-  --color-brand-dark: #3730A3;
-  --color-brand-50: #EEF2FF;
-  --color-brand-100: #E0E7FF;
+  /* Primary */
+  --color-apple-blue: #0071e3;
+  --color-apple-blue-hover: #0077ED;
+  --color-link-blue: #0066cc;
+  --color-bright-blue: #2997ff;
 
-  --color-coral: #F43F5E;
-  --color-coral-light: #FB7185;
-  --color-coral-dark: #E11D48;
+  /* Surfaces */
+  --color-surface-light: #f5f5f7;
+  --color-surface-dark: #000000;
+  --color-surface-card: #272729;
 
-  --color-amber: #F59E0B;
-  --color-emerald: #10B981;
-  --color-sky: #0EA5E9;
+  /* Brand mapping */
+  --color-brand: #0071e3;
+  --color-brand-light: #2997ff;
+  --color-brand-dark: #0066cc;
+  --color-brand-50: #EBF5FF;
+  --color-brand-100: #D6EBFF;
 
-  --color-slate-50: #F8FAFC;
-  --color-slate-100: #F1F5F9;
-  --color-slate-200: #E2E8F0;
-  --color-slate-300: #CBD5E1;
-  --color-slate-400: #94A3B8;
-  --color-slate-500: #64748B;
-  --color-slate-600: #475569;
-  --color-slate-700: #334155;
-  --color-slate-800: #1E293B;
-  --color-slate-900: #0F172A;
+  --color-coral: #FF3B30;
+  --color-coral-light: #FF6961;
+  --color-coral-dark: #D70015;
 
-  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-display: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --color-amber: #FF9F0A;
+  --color-emerald: #30D158;
+  --color-sky: #64D2FF;
+
+  /* Neutrals — Apple grays */
+  --color-slate-50: #f5f5f7;
+  --color-slate-100: #e8e8ed;
+  --color-slate-200: #d2d2d7;
+  --color-slate-300: #b0b0b6;
+  --color-slate-400: #86868b;
+  --color-slate-500: #6e6e73;
+  --color-slate-600: #424245;
+  --color-slate-700: #333336;
+  --color-slate-800: #1d1d1f;
+  --color-slate-900: #000000;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-  background: #FFFFFF;
-  color: var(--color-slate-800);
+  background: #ffffff;
+  color: #1d1d1f;
   font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.47;
+  letter-spacing: -0.022em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background: var(--color-brand-100);
-  color: var(--color-brand-dark);
+  background: #0071e3;
+  color: #ffffff;
 }
 
-::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: #d2d2d7; border-radius: 4px; }
 
 /* Marquee */
 @keyframes marquee {
@@ -72,7 +89,7 @@ body {
 .animate-scroll-left { animation: scrollLeft 50s linear infinite; }
 .animate-scroll-right { animation: scrollRight 50s linear infinite; }
 
-/* Gradient mesh blobs */
+/* Gradient mesh */
 @keyframes meshFloat {
   0%, 100% { transform: translate(0, 0) scale(1); }
   33% { transform: translate(30px, -20px) scale(1.05); }
@@ -86,7 +103,7 @@ body {
 }
 .animate-dash-flow { animation: dashFlow 1.5s linear infinite; }
 
-/* Shimmer for CTA */
+/* Shimmer */
 @keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
@@ -96,7 +113,7 @@ body {
   animation: shimmer 3s ease-in-out infinite;
 }
 
-/* Gradient text utility */
+/* Gradient text */
 .text-gradient {
   background-clip: text;
   -webkit-background-clip: text;

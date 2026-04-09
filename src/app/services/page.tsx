@@ -80,17 +80,17 @@ export default function ServicesPage() {
       <main>
         {/* Hero */}
         <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-b from-slate-50 via-white to-white">
-          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} className="max-w-3xl mx-auto text-center">
-              <p className="text-[13px] font-bold text-brand uppercase tracking-wider mb-4">Our services</p>
-              <h1 className="text-[2.4rem] sm:text-[3.2rem] lg:text-[3.6rem] font-extrabold leading-[1.08] tracking-[-0.035em] text-slate-900">
+              <p className="text-[13px] font-bold text-[#0071e3] uppercase tracking-wider mb-4">Our services</p>
+              <h1 className="text-[2.4rem] sm:text-[3.2rem] lg:text-[3.6rem] font-extrabold leading-[1.08] tracking-[-0.035em] text-[#1d1d1f]">
                 Six ways we put{" "}
                 <span className="text-gradient bg-gradient-to-r from-brand via-purple-500 to-brand-light">
                   AI to work
                 </span>{" "}
                 for you
               </h1>
-              <p className="mt-6 text-[18px] leading-[1.7] text-slate-600 max-w-2xl mx-auto">
+              <p className="mt-6 text-[18px] leading-[1.7] text-[#424245] max-w-2xl mx-auto">
                 Every engagement starts with understanding your workflows. Then we pick
                 the right approach — or combine several — to deliver measurable results.
               </p>
@@ -100,30 +100,30 @@ export default function ServicesPage() {
 
         {/* Services detail */}
         <section className="py-20 lg:py-28">
-          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16 space-y-12">
+          <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16 space-y-12">
             {services.map((s, i) => {
               const Icon = s.icon;
               const isEven = i % 2 === 0;
               return (
-                <Section key={s.id} className={`rounded-2xl border border-slate-200/80 bg-white p-8 sm:p-10 lg:p-12 hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-shadow`}>
+                <Section key={s.id} className={`rounded-2xl border border-[#d2d2d7]/80 bg-white p-8 sm:p-10 lg:p-12 hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-shadow`}>
                   <div className={`grid lg:grid-cols-[1fr_1fr] gap-10 items-start ${!isEven ? "lg:direction-rtl" : ""}`}>
                     <div>
                       <div className={`inline-flex w-12 h-12 rounded-xl bg-gradient-to-br ${s.color} items-center justify-center text-white mb-5`}>
                         <Icon size={22} />
                       </div>
-                      <h2 className="text-[1.8rem] sm:text-[2.2rem] font-extrabold leading-[1.12] tracking-[-0.02em] text-slate-900">
+                      <h2 className="text-[1.8rem] sm:text-[2.2rem] font-extrabold leading-[1.12] tracking-[-0.02em] text-[#1d1d1f]">
                         {s.title}
                       </h2>
-                      <p className="mt-2 text-[16px] font-semibold text-slate-500">{s.tagline}</p>
-                      <p className="mt-4 text-[15px] leading-[1.7] text-slate-600">{s.description}</p>
+                      <p className="mt-2 text-[16px] font-semibold text-[#86868b]">{s.tagline}</p>
+                      <p className="mt-4 text-[15px] leading-[1.7] text-[#424245]">{s.description}</p>
                     </div>
-                    <div className="bg-slate-50 rounded-xl p-6">
-                      <p className="text-[12px] font-bold text-slate-400 uppercase tracking-wider mb-4">Common use cases</p>
+                    <div className="bg-[#f5f5f7] rounded-xl p-6">
+                      <p className="text-[12px] font-bold text-[#86868b] uppercase tracking-wider mb-4">Common use cases</p>
                       <ul className="space-y-3">
                         {s.useCases.map((uc) => (
                           <li key={uc} className="flex items-start gap-3">
-                            <div className="mt-0.5 w-5 h-5 rounded-full bg-emerald/10 flex items-center justify-center shrink-0">
-                              <Check size={11} className="text-emerald" strokeWidth={3} />
+                            <div className="mt-0.5 w-5 h-5 rounded-full bg-[#30D158]/10 flex items-center justify-center shrink-0">
+                              <Check size={11} className="text-[#30D158]" strokeWidth={3} />
                             </div>
                             <span className="text-[14px] text-slate-700">{uc}</span>
                           </li>
@@ -139,12 +139,12 @@ export default function ServicesPage() {
 
         {/* CTA */}
         <section className="py-20 lg:py-28 bg-gradient-to-b from-[#F5F3FF]/40 to-white">
-          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
             <Section className="text-center max-w-2xl mx-auto">
-              <h2 className="text-[2rem] sm:text-[2.4rem] font-extrabold leading-[1.12] tracking-[-0.03em] text-slate-900">
+              <h2 className="text-[2rem] sm:text-[2.4rem] font-extrabold leading-[1.12] tracking-[-0.03em] text-[#1d1d1f]">
                 Not sure which service you need?
               </h2>
-              <p className="mt-4 text-[16px] text-slate-600 leading-relaxed">
+              <p className="mt-4 text-[16px] text-[#424245] leading-relaxed">
                 Start with a free strategy call. We&apos;ll audit your workflows and tell you
                 exactly where AI will have the biggest impact.
               </p>

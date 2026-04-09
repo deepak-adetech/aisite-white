@@ -119,21 +119,21 @@ export default function StartPage() {
         <main className="pt-32 pb-20 lg:pt-40 lg:pb-28 min-h-screen bg-gradient-to-b from-slate-50 via-white to-white">
           <div className="mx-auto max-w-xl px-6 text-center">
             <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
-              <div className="w-16 h-16 rounded-2xl bg-emerald/10 flex items-center justify-center text-emerald mx-auto mb-6">
+              <div className="w-16 h-16 rounded-2xl bg-[#30D158]/10 flex items-center justify-center text-[#30D158] mx-auto mb-6">
                 <Check size={32} />
               </div>
-              <h1 className="text-[2rem] sm:text-[2.6rem] font-extrabold tracking-[-0.03em] text-slate-900">
+              <h1 className="text-[2rem] sm:text-[2.6rem] font-extrabold tracking-[-0.03em] text-[#1d1d1f]">
                 You&apos;re all set!
               </h1>
-              <p className="mt-4 text-[17px] text-slate-600 leading-relaxed">
+              <p className="mt-4 text-[17px] text-[#424245] leading-relaxed">
                 We&apos;ll review your answers and send a custom automation plan to{" "}
-                <span className="font-bold text-slate-900">{contactInfo.email || "your email"}</span>{" "}
+                <span className="font-bold text-[#1d1d1f]">{contactInfo.email || "your email"}</span>{" "}
                 within 24 hours.
               </p>
-              <p className="mt-6 text-[14px] text-slate-500">
+              <p className="mt-6 text-[14px] text-[#86868b]">
                 In the meantime, check out how we&apos;ve helped other companies:
               </p>
-              <a href="/case-studies" className="group inline-flex items-center gap-2 mt-4 text-[15px] font-bold text-brand hover:text-brand-dark transition-colors">
+              <a href="/case-studies" className="group inline-flex items-center gap-2 mt-4 text-[15px] font-bold text-[#0071e3] hover:text-[#0071e3]-dark transition-colors">
                 View case studies <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
               </a>
             </motion.div>
@@ -152,10 +152,10 @@ export default function StartPage() {
           {/* Progress bar */}
           <div className="mb-10">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-[12px] font-bold text-slate-400 uppercase tracking-wider">
+              <span className="text-[12px] font-bold text-[#86868b] uppercase tracking-wider">
                 Step {current + 1} of {steps.length}
               </span>
-              <span className="text-[12px] font-bold text-brand">{Math.round(progress)}%</span>
+              <span className="text-[12px] font-bold text-[#0071e3]">{Math.round(progress)}%</span>
             </div>
             <div className="h-1.5 rounded-full bg-slate-100 overflow-hidden">
               <motion.div
@@ -175,10 +175,10 @@ export default function StartPage() {
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.3 }}
             >
-              <h1 className="text-[1.6rem] sm:text-[2rem] font-extrabold tracking-[-0.02em] text-slate-900 leading-tight">
+              <h1 className="text-[1.6rem] sm:text-[2rem] font-extrabold tracking-[-0.02em] text-[#1d1d1f] leading-tight">
                 {step.question}
               </h1>
-              <p className="mt-2 text-[15px] text-slate-500 leading-relaxed">{step.subtitle}</p>
+              <p className="mt-2 text-[15px] text-[#86868b] leading-relaxed">{step.subtitle}</p>
 
               <div className="mt-8">
                 {step.type === "select" && step.options && (
@@ -189,8 +189,8 @@ export default function StartPage() {
                         onClick={() => handleSelect(opt)}
                         className={`w-full text-left rounded-xl border-2 px-5 py-4 text-[15px] font-medium transition-all duration-200 ${
                           answers[step.id] === opt
-                            ? "border-brand bg-brand-50 text-brand"
-                            : "border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50"
+                            ? "border-brand bg-[#0071e3]/5 text-[#0071e3]"
+                            : "border-[#d2d2d7] text-slate-700 hover:border-slate-300 hover:bg-[#f5f5f7]"
                         }`}
                       >
                         {opt}
@@ -209,8 +209,8 @@ export default function StartPage() {
                           onClick={() => handleMulti(opt)}
                           className={`text-left rounded-xl border-2 px-4 py-3.5 text-[14px] font-medium transition-all duration-200 ${
                             selected
-                              ? "border-brand bg-brand-50 text-brand"
-                              : "border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50"
+                              ? "border-brand bg-[#0071e3]/5 text-[#0071e3]"
+                              : "border-[#d2d2d7] text-slate-700 hover:border-slate-300 hover:bg-[#f5f5f7]"
                           }`}
                         >
                           <div className="flex items-center gap-2.5">
@@ -233,7 +233,7 @@ export default function StartPage() {
                     value={(answers[step.id] as string) || ""}
                     onChange={(e) => setAnswers((a) => ({ ...a, [step.id]: e.target.value }))}
                     placeholder={step.placeholder}
-                    className="w-full rounded-xl border-2 border-slate-200 bg-white px-5 py-4 text-[15px] text-slate-700 placeholder-slate-400 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/10 transition resize-none"
+                    className="w-full rounded-xl border-2 border-[#d2d2d7] bg-white px-5 py-4 text-[15px] text-slate-700 placeholder-slate-400 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/10 transition resize-none"
                   />
                 )}
 
@@ -244,21 +244,21 @@ export default function StartPage() {
                       value={contactInfo.name}
                       onChange={(e) => setContactInfo((c) => ({ ...c, name: e.target.value }))}
                       placeholder="Your full name"
-                      className="w-full rounded-xl border-2 border-slate-200 bg-white px-5 py-3.5 text-[15px] text-slate-700 placeholder-slate-400 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/10 transition"
+                      className="w-full rounded-xl border-2 border-[#d2d2d7] bg-white px-5 py-3.5 text-[15px] text-slate-700 placeholder-slate-400 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/10 transition"
                     />
                     <input
                       type="email"
                       value={contactInfo.email}
                       onChange={(e) => setContactInfo((c) => ({ ...c, email: e.target.value }))}
                       placeholder="Work email"
-                      className="w-full rounded-xl border-2 border-slate-200 bg-white px-5 py-3.5 text-[15px] text-slate-700 placeholder-slate-400 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/10 transition"
+                      className="w-full rounded-xl border-2 border-[#d2d2d7] bg-white px-5 py-3.5 text-[15px] text-slate-700 placeholder-slate-400 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/10 transition"
                     />
                     <input
                       type="text"
                       value={contactInfo.company}
                       onChange={(e) => setContactInfo((c) => ({ ...c, company: e.target.value }))}
                       placeholder="Company name"
-                      className="w-full rounded-xl border-2 border-slate-200 bg-white px-5 py-3.5 text-[15px] text-slate-700 placeholder-slate-400 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/10 transition"
+                      className="w-full rounded-xl border-2 border-[#d2d2d7] bg-white px-5 py-3.5 text-[15px] text-slate-700 placeholder-slate-400 focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/10 transition"
                     />
                   </div>
                 )}
@@ -271,7 +271,7 @@ export default function StartPage() {
             <button
               onClick={() => setCurrent((c) => Math.max(0, c - 1))}
               disabled={current === 0}
-              className="flex items-center gap-2 text-[14px] font-medium text-slate-500 hover:text-slate-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+              className="flex items-center gap-2 text-[14px] font-medium text-[#86868b] hover:text-slate-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
             >
               <ArrowLeft size={15} /> Back
             </button>

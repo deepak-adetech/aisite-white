@@ -13,7 +13,7 @@ const cases = [
     highlight: "80% auto-resolved",
     savings: "$12K/mo saved",
     bg: "bg-white",
-    border: "border-slate-200/80",
+    border: "border-[#d2d2d7]/80",
     accentDot: "bg-brand",
   },
   {
@@ -25,7 +25,7 @@ const cases = [
     highlight: "99.4% accuracy",
     savings: "$180K/yr recaptured",
     bg: "bg-white",
-    border: "border-slate-200/80",
+    border: "border-[#d2d2d7]/80",
     accentDot: "bg-orange-500",
   },
   {
@@ -37,7 +37,7 @@ const cases = [
     highlight: "3.2x more meetings",
     savings: "Zero new headcount",
     bg: "bg-white",
-    border: "border-slate-200/80",
+    border: "border-[#d2d2d7]/80",
     accentDot: "bg-purple-500",
   },
   {
@@ -49,8 +49,8 @@ const cases = [
     highlight: "100% compliance",
     savings: "3 FTEs redeployed",
     bg: "bg-white",
-    border: "border-slate-200/80",
-    accentDot: "bg-emerald",
+    border: "border-[#d2d2d7]/80",
+    accentDot: "bg-[#30D158]",
   },
   {
     industry: "Real Estate",
@@ -61,8 +61,8 @@ const cases = [
     highlight: "40x faster",
     savings: "$180K/yr recaptured",
     bg: "bg-white",
-    border: "border-slate-200/80",
-    accentDot: "bg-sky",
+    border: "border-[#d2d2d7]/80",
+    accentDot: "bg-[#64D2FF]",
   },
 ];
 
@@ -72,17 +72,17 @@ export default function CaseStudies() {
 
   return (
     <section id="case-studies" ref={ref} className="py-24 lg:py-32">
-      <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
+      <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="max-w-xl mb-14"
         >
-          <p className="text-[13px] font-bold text-brand uppercase tracking-wider mb-4">
+          <p className="text-[13px] font-bold text-[#0071e3] uppercase tracking-wider mb-4">
             Proof, not promises
           </p>
-          <h2 className="text-[2.2rem] sm:text-[2.8rem] font-extrabold leading-[1.1] tracking-[-0.03em] text-slate-900">
+          <h2 className="text-[2.2rem] sm:text-[2.8rem] font-extrabold leading-[1.1] tracking-[-0.03em] text-[#1d1d1f]">
             What actually happens when you automate
           </h2>
         </motion.div>
@@ -99,26 +99,26 @@ export default function CaseStudies() {
             >
               <div className="flex items-center gap-2.5 mb-3">
                 <div className={`w-2 h-2 rounded-full ${c.accentDot}`} />
-                <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">{c.industry}</span>
+                <span className="text-[11px] font-bold text-[#86868b] uppercase tracking-wider">{c.industry}</span>
               </div>
-              <h3 className="text-[16px] font-bold text-slate-900 leading-snug">{c.title}</h3>
-              <p className="mt-2 text-[13px] text-slate-600 leading-[1.6]">{c.description}</p>
+              <h3 className="text-[16px] font-bold text-[#1d1d1f] leading-snug">{c.title}</h3>
+              <p className="mt-2 text-[13px] text-[#424245] leading-[1.6]">{c.description}</p>
 
               <div className="mt-5 grid grid-cols-2 gap-2.5">
                 <div className="rounded-lg bg-white/70 backdrop-blur-sm px-3 py-2.5">
-                  <p className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Before</p>
-                  <p className="mt-0.5 text-[14px] font-bold text-slate-700">{c.before}</p>
+                  <p className="text-[9px] font-bold text-[#86868b] uppercase tracking-wider">Before</p>
+                  <p className="mt-0.5 text-[14px] font-bold text-[#333336]">{c.before}</p>
                 </div>
                 <div className="rounded-lg bg-white/70 backdrop-blur-sm px-3 py-2.5">
-                  <p className="text-[9px] font-bold text-emerald uppercase tracking-wider">After</p>
-                  <p className="mt-0.5 text-[14px] font-bold text-emerald">{c.after}</p>
+                  <p className="text-[9px] font-bold text-[#30D158] uppercase tracking-wider">After</p>
+                  <p className="mt-0.5 text-[14px] font-bold text-[#30D158]">{c.after}</p>
                 </div>
               </div>
 
               <div className="mt-3 flex items-center gap-2.5 text-[12px]">
-                <span className="font-bold text-slate-800">{c.highlight}</span>
+                <span className="font-bold text-[#1d1d1f]">{c.highlight}</span>
                 <span className="text-slate-300">|</span>
-                <span className="text-slate-500">{c.savings}</span>
+                <span className="text-[#86868b]">{c.savings}</span>
               </div>
             </motion.div>
           ))}
@@ -136,26 +136,26 @@ export default function CaseStudies() {
             >
               <div className="flex items-center gap-2.5 mb-3">
                 <div className={`w-2 h-2 rounded-full ${c.accentDot}`} />
-                <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">{c.industry}</span>
+                <span className="text-[11px] font-bold text-[#86868b] uppercase tracking-wider">{c.industry}</span>
               </div>
-              <h3 className="text-[16px] font-bold text-slate-900 leading-snug">{c.title}</h3>
-              <p className="mt-2 text-[13px] text-slate-600 leading-[1.6]">{c.description}</p>
+              <h3 className="text-[16px] font-bold text-[#1d1d1f] leading-snug">{c.title}</h3>
+              <p className="mt-2 text-[13px] text-[#424245] leading-[1.6]">{c.description}</p>
 
               <div className="mt-5 grid grid-cols-2 gap-2.5">
                 <div className="rounded-lg bg-white/70 backdrop-blur-sm px-3 py-2.5">
-                  <p className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Before</p>
-                  <p className="mt-0.5 text-[14px] font-bold text-slate-700">{c.before}</p>
+                  <p className="text-[9px] font-bold text-[#86868b] uppercase tracking-wider">Before</p>
+                  <p className="mt-0.5 text-[14px] font-bold text-[#333336]">{c.before}</p>
                 </div>
                 <div className="rounded-lg bg-white/70 backdrop-blur-sm px-3 py-2.5">
-                  <p className="text-[9px] font-bold text-emerald uppercase tracking-wider">After</p>
-                  <p className="mt-0.5 text-[14px] font-bold text-emerald">{c.after}</p>
+                  <p className="text-[9px] font-bold text-[#30D158] uppercase tracking-wider">After</p>
+                  <p className="mt-0.5 text-[14px] font-bold text-[#30D158]">{c.after}</p>
                 </div>
               </div>
 
               <div className="mt-3 flex items-center gap-2.5 text-[12px]">
-                <span className="font-bold text-slate-800">{c.highlight}</span>
+                <span className="font-bold text-[#1d1d1f]">{c.highlight}</span>
                 <span className="text-slate-300">|</span>
-                <span className="text-slate-500">{c.savings}</span>
+                <span className="text-[#86868b]">{c.savings}</span>
               </div>
             </motion.div>
           ))}

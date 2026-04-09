@@ -39,18 +39,18 @@ function FAQItem({ faq }: { faq: (typeof faqs)[0] }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="border-b border-slate-100 last:border-0">
+    <div className="border-b border-[#e8e8ed] last:border-0">
       <button
         onClick={() => setOpen(!open)}
         className="flex items-center justify-between w-full py-5 sm:py-6 text-left group"
       >
-        <span className="text-[15px] font-bold text-slate-800 pr-8 group-hover:text-brand transition-colors">
+        <span className="text-[15px] font-bold text-[#1d1d1f] pr-8 group-hover:text-[#0071e3] transition-colors">
           {faq.q}
         </span>
-        <div className="w-7 h-7 rounded-lg bg-slate-100 flex items-center justify-center shrink-0 group-hover:bg-brand-50 transition-colors">
+        <div className="w-7 h-7 rounded-lg bg-slate-100 flex items-center justify-center shrink-0 group-hover:bg-[#0071e3]/5 transition-colors">
           {open
-            ? <Minus size={14} className="text-slate-500 group-hover:text-brand" />
-            : <Plus size={14} className="text-slate-500 group-hover:text-brand" />
+            ? <Minus size={14} className="text-[#86868b] group-hover:text-[#0071e3]" />
+            : <Plus size={14} className="text-[#86868b] group-hover:text-[#0071e3]" />
           }
         </div>
       </button>
@@ -63,7 +63,7 @@ function FAQItem({ faq }: { faq: (typeof faqs)[0] }) {
             transition={{ duration: 0.25, ease: "easeOut" }}
             className="overflow-hidden"
           >
-            <p className="pb-6 text-[14px] text-slate-600 leading-[1.75] max-w-2xl">
+            <p className="pb-6 text-[14px] text-[#424245] leading-[1.75] max-w-2xl">
               {faq.a}
             </p>
           </motion.div>
@@ -79,14 +79,14 @@ export default function FAQ() {
 
   return (
     <section id="faq" ref={ref} className="py-24 lg:py-32">
-      <div className="mx-auto max-w-[1100px] px-6 sm:px-10 lg:px-16">
+      <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-12"
         >
-          <h2 className="text-[2.2rem] sm:text-[2.8rem] font-extrabold leading-[1.1] tracking-[-0.03em] text-slate-900">
+          <h2 className="text-[2.2rem] sm:text-[2.8rem] font-extrabold leading-[1.1] tracking-[-0.03em] text-[#1d1d1f]">
             Common questions
           </h2>
         </motion.div>
@@ -95,7 +95,7 @@ export default function FAQ() {
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-          className="rounded-2xl bg-white border border-slate-200 px-6 sm:px-10"
+          className="rounded-2xl bg-white border border-[#d2d2d7] px-6 sm:px-10"
         >
           {faqs.map((f, i) => <FAQItem key={i} faq={f} />)}
         </motion.div>
