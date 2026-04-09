@@ -90,7 +90,7 @@ export default function ToolAgnostic() {
 
   return (
     <section ref={ref} className="py-24 lg:py-32 overflow-hidden">
-      <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16 mb-12">
+      <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 mb-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

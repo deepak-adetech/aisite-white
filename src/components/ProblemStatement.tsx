@@ -150,7 +150,7 @@ export default function ProblemStatement() {
 
   return (
     <section ref={ref} className="py-24 lg:py-32 bg-gradient-to-b from-white via-slate-50/30 to-white overflow-hidden">
-      <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
+      <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
 
         {/* Header */}
         <motion.div

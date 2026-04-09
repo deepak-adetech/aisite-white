@@ -41,7 +41,7 @@ export default function Pillars() {
 
   return (
     <section ref={ref} className="py-24 lg:py-32 bg-gradient-to-b from-[#FFF7ED]/50 to-white">
-      <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
+      <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

@@ -127,7 +127,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative mx-auto max-w-[1400px] px-6">
+      <div className="relative mx-auto max-w-7xl px-6">
         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-8 items-center">
           <div>
             <motion.div {...fadeUp(0)}>

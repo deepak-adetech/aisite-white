@@ -80,7 +80,7 @@ export default function ServicesPage() {
       <main>
         {/* Hero */}
         <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-b from-slate-50 via-white to-white">
-          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} className="max-w-3xl mx-auto text-center">
               <p className="text-[13px] font-bold text-[#0071e3] uppercase tracking-wider mb-4">Our services</p>
               <h1 className="text-[2.4rem] sm:text-[3.2rem] lg:text-[3.6rem] font-extrabold leading-[1.08] tracking-[-0.035em] text-[#1d1d1f]">
@@ -100,7 +100,7 @@ export default function ServicesPage() {
 
         {/* Services detail */}
         <section className="py-20 lg:py-28">
-          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16 space-y-12">
+          <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 space-y-12">
             {services.map((s, i) => {
               const Icon = s.icon;
               const isEven = i % 2 === 0;
@@ -139,7 +139,7 @@ export default function ServicesPage() {
 
         {/* CTA */}
         <section className="py-20 lg:py-28 bg-gradient-to-b from-[#F5F3FF]/40 to-white">
-          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
             <Section className="text-center max-w-2xl mx-auto">
               <h2 className="text-[2rem] sm:text-[2.4rem] font-extrabold leading-[1.12] tracking-[-0.03em] text-[#1d1d1f]">
                 Not sure which service you need?
