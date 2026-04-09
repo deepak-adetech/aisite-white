@@ -153,7 +153,7 @@ export default function Hero() {
         <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-coral/[0.03] blur-3xl animate-mesh" style={{ animationDelay: "-7s" }} />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left — copy */}
           <div>

@@ -32,7 +32,7 @@ const groups = [
 export default function Footer() {
   return (
     <footer className="border-t border-slate-100 bg-white">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
+      <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">

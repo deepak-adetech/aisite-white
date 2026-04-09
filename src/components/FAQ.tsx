@@ -80,7 +80,7 @@ export default function FAQ() {
 
   return (
     <section id="faq" ref={ref} className="py-20 lg:py-28">
-      <div className="mx-auto max-w-3xl px-5 sm:px-8">
+      <div className="mx-auto max-w-5xl px-6 sm:px-10 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
