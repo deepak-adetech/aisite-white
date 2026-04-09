@@ -27,7 +27,7 @@ function AnimatedWorkflow() {
   return (
     <div className="relative w-full max-w-[380px] mx-auto">
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[340px] h-[340px] rounded-full bg-[#f5f5f7] border border-[#d2d2d7]/30" />
+        <div className="w-[340px] h-[340px] rounded-full bg-gradient-to-br from-[#0071e3]/[0.06] via-[#f5f5f7] to-[#2997ff]/[0.04] border border-[#d2d2d7]/30" />
         <motion.div animate={{ rotate: 360 }} transition={{ duration: 30, repeat: Infinity, ease: "linear" }} className="absolute w-[260px] h-[260px] rounded-full border border-dashed border-[#d2d2d7]/40">
           <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-[#0071e3]/30" />
         </motion.div>
@@ -115,10 +115,19 @@ function AnimatedWorkflow() {
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pt-24 pb-16 lg:pt-32 lg:pb-24">
-      <div className="absolute inset-0 pointer-events-none bg-[#f5f5f7]" />
+    <section className="relative overflow-hidden pt-28 pb-16 lg:pt-36 lg:pb-24 bg-gradient-to-b from-[#f5f5f7] via-white to-white">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-[#0071e3]/[0.05] to-[#2997ff]/[0.03] blur-3xl animate-mesh" />
+        <div className="absolute -bottom-32 -left-32 w-[400px] h-[400px] rounded-full bg-gradient-to-tr from-[#FF3B30]/[0.03] to-[#FF9F0A]/[0.02] blur-3xl animate-mesh" style={{ animationDelay: "-8s" }} />
+        <div className="absolute inset-0 opacity-[0.2]">
+          <svg width="100%" height="100%">
+            <defs><pattern id="heroGrid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.5" fill="#86868b" /></pattern></defs>
+            <rect width="100%" height="100%" fill="url(#heroGrid)" />
+          </svg>
+        </div>
+      </div>
 
-      <div className="relative mx-auto max-w-[980px] px-6">
+      <div className="relative mx-auto max-w-[1400px] px-6">
         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-8 items-center">
           <div>
             <motion.div {...fadeUp(0)}>

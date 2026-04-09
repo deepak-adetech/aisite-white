@@ -40,7 +40,7 @@ export default function SolutionPage({ tag, title, titleGradient, subtitle, pain
       <main>
         {/* Hero */}
         <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-b from-slate-50 via-white to-white">
-          <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-3xl mx-auto text-center">
               <p className="text-[13px] font-bold text-[#0071e3] uppercase tracking-wider mb-4">{tag}</p>
               <h1 className="text-[2.4rem] sm:text-[3rem] lg:text-[3.4rem] font-extrabold leading-[1.08] tracking-[-0.035em] text-[#1d1d1f]">
@@ -58,7 +58,7 @@ export default function SolutionPage({ tag, title, titleGradient, subtitle, pain
 
         {/* Pain points */}
         <section className="py-20 lg:py-28">
-          <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
             <Section className="max-w-xl mb-12">
               <p className="text-[13px] font-bold text-[#FF3B30] uppercase tracking-wider mb-4">The challenge</p>
               <h2 className="text-[2rem] sm:text-[2.4rem] font-extrabold leading-[1.12] tracking-[-0.03em] text-[#1d1d1f]">
@@ -78,7 +78,7 @@ export default function SolutionPage({ tag, title, titleGradient, subtitle, pain
 
         {/* Solutions */}
         <section className="py-20 lg:py-28 bg-gradient-to-b from-[#F5F3FF]/40 to-white">
-          <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
             <Section className="max-w-xl mb-12">
               <p className="text-[13px] font-bold text-[#0071e3] uppercase tracking-wider mb-4">What we build</p>
               <h2 className="text-[2rem] sm:text-[2.4rem] font-extrabold leading-[1.12] tracking-[-0.03em] text-[#1d1d1f]">
@@ -104,7 +104,7 @@ export default function SolutionPage({ tag, title, titleGradient, subtitle, pain
 
         {/* Before/After */}
         <section className="py-20 lg:py-28">
-          <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
             <Section className="text-center max-w-xl mx-auto mb-12">
               <p className="text-[13px] font-bold text-[#30D158] uppercase tracking-wider mb-4">The transformation</p>
               <h2 className="text-[2rem] sm:text-[2.4rem] font-extrabold leading-[1.12] tracking-[-0.03em] text-[#1d1d1f]">Before vs. After</h2>
@@ -131,7 +131,7 @@ export default function SolutionPage({ tag, title, titleGradient, subtitle, pain
 
         {/* Results */}
         <section className="py-16 bg-gradient-to-r from-[#1d1d1f] via-[#1d1d1f] to-[#333336]">
-          <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {results.map((r) => (
                 <div key={r.label} className="text-center">
@@ -145,7 +145,7 @@ export default function SolutionPage({ tag, title, titleGradient, subtitle, pain
 
         {/* CTA */}
         <section className="py-20 lg:py-28">
-          <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
             <Section className="text-center max-w-2xl mx-auto">
               <h2 className="text-[2rem] sm:text-[2.4rem] font-extrabold leading-[1.12] tracking-[-0.03em] text-[#1d1d1f]">
                 Ready to transform your {tag.toLowerCase()}?

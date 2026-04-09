@@ -61,7 +61,7 @@ export default function AboutPage() {
       <main>
         {/* Hero */}
         <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-b from-slate-50 via-white to-white">
-          <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
@@ -87,7 +87,7 @@ export default function AboutPage() {
 
         {/* Story */}
         <section className="py-20 lg:py-28">
-          <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <Section>
                 <p className="text-[13px] font-bold text-coral uppercase tracking-wider mb-4">Our story</p>
@@ -121,7 +121,7 @@ export default function AboutPage() {
 
         {/* Values */}
         <section className="py-20 lg:py-28 bg-gradient-to-b from-[#F5F3FF]/40 to-white">
-          <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
             <Section className="max-w-xl mb-14">
               <p className="text-[13px] font-bold text-[#0071e3] uppercase tracking-wider mb-4">Our values</p>
               <h2 className="text-[2rem] sm:text-[2.4rem] font-extrabold leading-[1.12] tracking-[-0.03em] text-[#1d1d1f]">
@@ -148,7 +148,7 @@ export default function AboutPage() {
 
         {/* Team */}
         <section className="py-20 lg:py-28">
-          <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
             <Section className="text-center max-w-lg mx-auto mb-14">
               <p className="text-[13px] font-bold text-[#0071e3] uppercase tracking-wider mb-4">The team</p>
               <h2 className="text-[2rem] sm:text-[2.4rem] font-extrabold leading-[1.12] tracking-[-0.03em] text-[#1d1d1f]">
@@ -175,7 +175,7 @@ export default function AboutPage() {
 
         {/* CTA */}
         <section className="py-20 lg:py-28">
-          <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
             <Section className="rounded-[2rem] bg-gradient-to-br from-slate-900 via-[#1a1040] to-brand-dark px-8 py-16 sm:px-16 sm:py-20 text-center relative overflow-hidden">
               <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-brand/15 rounded-full blur-[100px]" />
               <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-coral/10 rounded-full blur-[80px]" />

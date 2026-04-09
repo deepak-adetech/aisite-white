@@ -29,7 +29,7 @@ export default function ContactPage() {
       <main>
         {/* Hero */}
         <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-b from-slate-50 via-white to-white">
-          <div className="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
             <div className="grid lg:grid-cols-[1fr_1fr] gap-16 items-start">
               {/* Left — copy */}
               <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }}>

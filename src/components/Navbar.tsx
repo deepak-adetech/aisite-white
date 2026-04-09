@@ -79,7 +79,7 @@ export default function Navbar() {
           : "bg-white/0"
       }`}
     >
-      <div className="mx-auto max-w-[980px] px-6">
+      <div className="mx-auto max-w-[1400px] px-6">
         <div className="flex h-[48px] items-center justify-between">
           <Logo />
 
