@@ -255,7 +255,7 @@ export default function Hero() {
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-brand" />
                 </span>
                 <span className="text-[11px] font-bold text-brand tracking-wide uppercase">
-                  Accepting new clients
+                  AI &amp; Automation Partners for Scaling Teams
                 </span>
               </div>
             </motion.div>
