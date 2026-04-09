@@ -32,11 +32,10 @@ const groups = [
 export default function Footer() {
   return (
     <footer className="border-t border-slate-100 bg-white">
-      <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {/* Brand */}
+      <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 py-14">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2.5 mb-3">
+            <div className="flex items-center gap-2.5 mb-4">
               <svg width="24" height="24" viewBox="0 0 28 28" fill="none" className="shrink-0">
                 <rect width="28" height="28" rx="7" fill="#4F46E5" />
                 <circle cx="10" cy="10" r="2.5" fill="white" />
@@ -44,22 +43,22 @@ export default function Footer() {
                 <circle cx="10" cy="18" r="2.5" fill="white" opacity="0.65" />
                 <circle cx="18" cy="18" r="2.5" fill="white" />
               </svg>
-              <span className="text-[15px] font-semibold tracking-[-0.01em]">
+              <span className="text-[15px] font-bold tracking-[-0.01em]">
                 <span className="text-slate-900">AutoWorkflows</span>
                 <span className="text-brand">.AI</span>
               </span>
             </div>
-            <p className="text-[12px] text-slate-400 leading-relaxed max-w-[200px]">
-              Custom AI agents and workflow automation. Built for your business.
+            <p className="text-[13px] text-slate-500 leading-relaxed max-w-[220px]">
+              Custom AI agents and workflow automation. Built for your business, owned by you.
             </p>
           </div>
 
           {groups.map((g) => (
             <div key={g.title}>
-              <h4 className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-3">
+              <h4 className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-4">
                 {g.title}
               </h4>
-              <ul className="space-y-2">
+              <ul className="space-y-2.5">
                 {g.links.map((l) => (
                   <li key={l.label}>
                     <a href={l.href} className="text-[13px] text-slate-500 hover:text-slate-900 transition-colors">
@@ -72,13 +71,11 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-10 pt-6 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-3">
-          <p className="text-[11px] text-slate-400">
-            &copy; {new Date().getFullYear()} AutoWorkflows.AI
+        <div className="mt-12 pt-7 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-3">
+          <p className="text-[12px] text-slate-400">
+            &copy; {new Date().getFullYear()} AutoWorkflows.AI. All rights reserved.
           </p>
-          <p className="text-[11px] text-slate-400">
-            AI is all we do.
-          </p>
+          <p className="text-[12px] text-slate-400">AI is all we do.</p>
         </div>
       </div>
     </footer>
