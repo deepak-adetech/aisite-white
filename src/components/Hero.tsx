@@ -261,7 +261,7 @@ export default function Hero() {
             </motion.div>
 
             <motion.h1 {...fadeUp(0.1)} className="text-[2.4rem] sm:text-[3rem] lg:text-[3.5rem] font-extrabold leading-[1.08] tracking-[-0.035em] text-slate-900">
-              Turn Workflows into Autopilot.
+              Turn Workflows into <span className="text-gradient bg-gradient-to-r from-brand via-purple-500 to-brand-light">Autopilot.</span>
             </motion.h1>
 
             <motion.p {...fadeUp(0.18)} className="mt-4 text-[17px] sm:text-[19px] leading-[1.6] text-slate-500 max-w-[500px]">

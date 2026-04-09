@@ -41,13 +41,13 @@ export default function SolutionPage({ tag, title, titleGradient, subtitle, pain
         {/* Hero */}
         <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-b from-slate-50 via-white to-white">
           <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-16">
-            <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-3xl">
+            <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-3xl mx-auto text-center">
               <p className="text-[13px] font-bold text-brand uppercase tracking-wider mb-4">{tag}</p>
               <h1 className="text-[2.4rem] sm:text-[3rem] lg:text-[3.4rem] font-extrabold leading-[1.08] tracking-[-0.035em] text-slate-900">
                 {title}{" "}
                 <span className="text-gradient bg-gradient-to-r from-brand via-purple-500 to-brand-light">{titleGradient}</span>
               </h1>
-              <p className="mt-5 text-[17px] leading-[1.7] text-slate-600 max-w-2xl">{subtitle}</p>
+              <p className="mt-5 text-[17px] leading-[1.7] text-slate-600 max-w-2xl mx-auto">{subtitle}</p>
               <a href="/start" className="group inline-flex items-center gap-2 mt-8 rounded-xl bg-gradient-to-r from-brand to-brand-dark px-7 py-3.5 text-[15px] font-bold text-white shadow-lg shadow-brand/25 hover:-translate-y-0.5 transition-all duration-200">
                 Automate your first workflow free
                 <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />

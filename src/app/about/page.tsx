@@ -66,7 +66,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="max-w-3xl"
+              className="max-w-3xl mx-auto text-center"
             >
               <p className="text-[13px] font-bold text-brand uppercase tracking-wider mb-4">About us</p>
               <h1 className="text-[2.4rem] sm:text-[3.2rem] lg:text-[3.6rem] font-extrabold leading-[1.08] tracking-[-0.035em] text-slate-900">
@@ -75,7 +75,7 @@ export default function AboutPage() {
                   ready to stop doing things manually
                 </span>
               </h1>
-              <p className="mt-6 text-[18px] leading-[1.7] text-slate-600 max-w-2xl">
+              <p className="mt-6 text-[18px] leading-[1.7] text-slate-600 max-w-2xl mx-auto">
                 AutoWorkflows.AI is a focused AI automation agency. We don&apos;t do
                 everything — we do one thing exceptionally well: we build custom AI
                 agents and automations that replace repetitive work, so your team
