@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "motion/react";
+
 export default function Logo({ className = "" }: { className?: string }) {
   return (
     <a href="#" className={`flex items-center gap-2.5 ${className}`}>
@@ -22,9 +24,33 @@ export default function Logo({ className = "" }: { className?: string }) {
         <line x1="12.5" y1="18" x2="15.5" y2="18" stroke="white" strokeWidth="1.2" opacity="0.5" />
         <line x1="12" y1="12" x2="16" y2="16" stroke="white" strokeWidth="1" opacity="0.3" />
       </svg>
-      <span className="text-[17px] font-semibold tracking-[-0.02em]">
+      <span className="text-[17px] font-semibold tracking-[-0.02em] relative">
         <span className="text-slate-900">AutoWorkflows</span>
-        <span className="text-brand">.AI</span>
+        <span className="relative inline-block">
+          {/* Animated gradient .AI */}
+          <span
+            className="text-gradient bg-gradient-to-r from-brand via-purple-500 to-brand-light bg-[length:200%_100%] animate-shimmer"
+          >
+            .AI
+          </span>
+          {/* Hovering sparkle */}
+          <motion.span
+            animate={{
+              y: [0, -4, 0],
+              x: [0, 2, -1, 0],
+              rotate: [0, 15, -10, 0],
+              scale: [1, 1.15, 0.9, 1],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute -top-2.5 -right-3 text-[10px] pointer-events-none select-none"
+          >
+            ✦
+          </motion.span>
+        </span>
       </span>
     </a>
   );
